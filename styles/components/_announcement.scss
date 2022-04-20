@@ -1,0 +1,41 @@
+.announcement {
+  background: $color-pink;
+  color: $color-cream;
+  height: 50px;
+  top: 0;
+  line-height: 50px;
+  position: fixed;
+  padding: 0 40px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2000;
+
+  &--hidden {
+    display: none;
+  }
+
+  @include m {
+    font-size: 9px;
+    min-height: 30px;
+    top: 15px;
+    line-height: 14px;
+    padding: 10px 30px;
+  }
+}
+
+.announcement__close {
+  position: absolute;
+  right: 16px;
+  top: 2px;
+  cursor: pointer;
+
+  @include m {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+.announcement p {
+  margin: 0;
+}

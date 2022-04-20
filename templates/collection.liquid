@@ -1,0 +1,32 @@
+<section class="page-header">
+  <h1 class="page-header__title">{{ collection.title }}</h1>
+  <div class="page-header__intro">
+    {{ collection.description }}
+  </div>
+</section>
+
+<section class="product-grid product-grid--items-3">
+  <div class="product-grid__tiles">
+    {% for product in collection.products %}
+    {% assign instructions = product.metafields.global %}
+      <a href="{{ product.url | within: collection }}" class="tile">
+        <img class="tile__image" src="{{ product.featured_image.src | img_url: "1200x" }}" alt="{{ product.title }}">
+        {% for tag in product.tags %}
+          {% if tag contains 'sticker--DISABLED' %}
+            <span class="tile__sticker">
+              {% include tag %}
+            </span>
+          {% endif %}
+        {% endfor %}
+        <span class="tile__title">{{ product.title }}</span>
+        <span class="tile__content">{{ instructions.description_tag }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% section 'product-feature-for-collection' %}
+{% section 'product-grid' %}
+{% section 'side-by-side' %}
+{% section 'content-grid' %}
+

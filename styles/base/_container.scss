@@ -1,0 +1,16 @@
+@mixin container () {
+  margin: 0 auto;
+  max-width: 1440px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: 250px;
+  margin: -250px 0 0;
+}

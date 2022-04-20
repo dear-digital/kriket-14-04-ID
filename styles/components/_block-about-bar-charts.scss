@@ -1,0 +1,53 @@
+.block-about-bar-charts {
+  text-align: center;
+  margin: 70px auto;
+  max-width: 990px;
+
+  @include m {
+    margin: 30px 10px;
+  }
+}
+
+#farmer-medium-light-skin-tone_1f9d1-1f3fc-200d-1f33e\ 1,
+#woman-raising-hand-medium-skin-tone_1f64b-1f3fd-200d-2640-fe0f\ 1 {
+  clip-path: inset(1px 0px 0px 0px);
+}
+
+@keyframes anim-bar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: rotate(-3deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.block-about-bar-charts.animate {
+  #bar-1, #bar-2, #bar-3, #bar-4, #bar-5 {
+    transform-origin: left center;
+    animation: anim-bar 2s;
+    animation-fill-mode: forwards;
+  }
+
+
+  // Animations for circular graph
+  #group-1, #group-2, #group-3 {
+    transform-origin: center center;
+    animation: appear 400ms;
+    animation-fill-mode: both;  
+  }
+
+  #group-2 { animation-delay: 800ms; }
+  #group-3 { animation-delay: 1600ms; }
+}

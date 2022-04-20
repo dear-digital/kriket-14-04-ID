@@ -1,0 +1,92 @@
+{% if cart.item_count > 0 %}
+  <form action="/cart" method="post" novalidate>
+    <div class="cart">
+      <div class="cart__left">
+        <table>
+          <tbody>
+            {% for item in cart.items %}
+              <tr class="cart__row" data-type="{{ item.product.type | handleize }}" data-row="{{ forloop.index }}">
+                <td class="cart__row__image">
+                  <a href="{{ item.url | within: item.product.collections[0] }}">
+                    <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}" width="200">
+                  </a>
+                </td>
+                <td class="cart__row__name">
+                  <div class="cart__row__collection">{{ item.product.collections[0].title }}</div>
+                  <a href="{{ item.url }}">{{ item.product.title }}</a>
+                </td>
+                <td class="cart__row__variant">
+                  {{ item.variant.title }}
+                </td>
+                <td class="cart__row__quantities">
+                  <a href="/cart/change?line={{ forloop.index }}&amp;quantity={{ item.quantity | minus: 1 }}">-</a>
+                  {{ item.quantity }}
+                  <a href="/cart/change?line={{ forloop.index }}&amp;quantity={{ item.quantity | plus: 1 }}">+</a>
+                </td>
+                <td class="cart__row__price">
+                  {% if item.original_line_price != item.line_price %}{{ item.original_line_price | money }}{% endif %}
+                  {{ item.line_price | money }}
+                  {% for discount in item.discounts %}{{ discount.title }}{% endfor %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <div class="cart__right__requests">
+          <div class="cart__right__requests__title">{{ settings.cart-special-request }}</div>
+          <textarea placeholder="{{ settings.cart-special-request-placeholder }}" name="note"></textarea>
+        </div>
+      </div>
+      <div class="cart__right">
+          <div class="cart__totals">
+            <div class="cart__totals__row">
+              <div>Subtotal</div>
+              <div>{{ cart.total_price | money }}</div>
+            </div>
+            <div class="cart__totals__row">
+              <div>Shipping</div>
+              <div>Calculated at next step</div>
+            </div>
+            <div class="cart__totals__row">
+              <div>Total (Inc vat)</div>
+              <div>{{ cart.total_price | money }}</div>
+            </div>
+          </div>
+          <div class="cart-option" id="gift-wrap">
+            <div class="cart-option__checkbox">
+              <div class="cart-option__checkbox__box">
+                <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="1" y="1.61228" width="34" height="34" stroke="#30312F" stroke-width="2"/>
+                  <path d="M0.692374 1.30462L34.6153 35.2277" stroke="#30312F" stroke-width="2"/>
+                  <path d="M34.6152 1.9969L1.38505 35.2277" stroke="#30312F" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="cart-option__checkbox__title">{{ settings.cart-gift-wrap }}</div>
+            </div>
+            <textarea placeholder="Personal message" name="attributes[Gift Wrap Message]" maxlength="160"></textarea>
+          </div>
+          <div class="cart-option">
+            <div class="cart-option__checkbox">
+              <div class="cart-option__checkbox__box">
+                <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="1" y="1.61228" width="34" height="34" stroke="#30312F" stroke-width="2"/>
+                  <path d="M0.692374 1.30462L34.6153 35.2277" stroke="#30312F" stroke-width="2"/>
+                  <path d="M34.6152 1.9969L1.38505 35.2277" stroke="#30312F" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="cart-option__checkbox__title">{{ settings.cart-vat-invoice }}</div>
+            </div>
+            <input placeholder="Company name" name="attributes[Company Name]">
+            <input placeholder="VAT Number" name="attributes[VAT Number]">
+          </div>
+          <button type="submit" name="checkout" class="arrow-link"><span>{{ settings.cart-checkout }}</span> {% include 'arrow.svg' %}</button>
+      </div>
+    </div>
+  </form>
+{% else %}
+  <h1 class="article__title">{{ settings.cart-empty }}</h1>
+{% endif %}
+
+{% section 'product-grid--cart' %}
+{% section 'side-by-side--cart' %}
+{% section 'content-grid--cart' %}

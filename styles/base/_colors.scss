@@ -1,0 +1,66 @@
+$color-black: #30312F;
+$color-cream: #F6F4EA;
+
+$color-green: #5BA55C;
+$color-yellow: #EACB4A;
+$color-orange: #D26D4B;
+$color-blue: #7FB6E3;
+$color-pink: #DE9AA0;
+$color-brown: #995442;
+$color-tan: #DBB199;
+
+$color-tag: #DBB199;
+
+main .background--green  { background-color: $color-green; }
+main .background--yellow { background-color: $color-yellow; }
+main .background--orange { background-color: $color-orange; }
+main .background--blue   { background-color: $color-blue; }
+main .background--pink   { background-color: $color-pink; }
+main .background--brown  { background-color: $color-brown; }
+main .background--tan    { background-color: $color-tan; }
+
+main .foreground--green  { color: $color-green; svg * { stroke: $color-green; }}
+main .foreground--yellow { color: $color-yellow; svg * { stroke: $color-yellow; }}
+main .foreground--orange { color: $color-orange; svg * { stroke: $color-orange; }}
+main .foreground--blue   { color: $color-blue; svg * { stroke: $color-blue; }}
+main .foreground--pink   { color: $color-pink; svg * { stroke: $color-pink; }}
+main .foreground--brown  { color: $color-brown; svg * { stroke: $color-brown; }}
+main .foreground--tan    { color: $color-tan; svg * { stroke: $color-tan; }}
+
+// Invert the colors on a few pages
+body[data-path$="collections-crunchy-crickets"],
+body[data-path$="collections-crunchy-crickets-products-tempting-taco"],
+body[data-path$="collections-crunchy-crickets-products-discovery-box-2"],
+body[data-path$="collections-crunchy-crickets-products-punchy-paprika"],
+body[data-path$="collections-crunchy-crickets-products-glorious-garlic"] {
+  background: $color-black;
+  color: $color-cream;
+
+  .footer__banner {
+    background: $color-cream;
+    color: $color-black;
+  }
+
+  .nav__center {
+    svg path {
+      fill: $color-cream;
+
+      &:nth-child(22),
+      &:nth-child(21),
+      &:nth-child(20),
+      &:nth-child(19),
+      &:nth-child(18),
+      &:nth-child(17) {
+        fill: $color-blue;
+      }
+    }
+  }
+
+  #hamburger svg * {
+    stroke: $color-cream;
+  }
+
+  .purchase-buttons button:hover {
+    color: $color-cream;
+  }
+}

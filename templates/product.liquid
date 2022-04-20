@@ -1,0 +1,57 @@
+<section class="page-header">
+  <div class="page-header__eyebrow">{{ product.collections.last.title }}</div>
+  <h1 class="page-header__title">{{ product.title }}</h1>
+  <div class="page-header__intro">{{ product.description }}</div>
+</section>
+
+<section class="product-feature">
+  <div class="product-feature__image">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {% for image in product.images %}
+          <div class="swiper-slide">
+            <img src="{{ image.src | img_url: "2000x" }}" alt="{{ section.settings.subtitle }}"">
+          </div>
+        {% endfor %}
+      </div>
+      <button aria-label="Previous" class="swiper-button-prev">
+        <svg width="60" height="42" viewBox="0 0 60 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="60" y1="21" x2="-8.74228e-08" y2="21" stroke="#30312F" stroke-width="2"/>
+          <path d="M1.83588e-06 21C11.598 21 21 30.402 21 42" stroke="#30312F" stroke-width="2"/>
+          <path d="M21 2.75382e-06C21 11.598 11.598 21 0 21" stroke="#30312F" stroke-width="2"/>
+        </svg>
+      </button>
+      <button aria-label="Next" class="swiper-button-next">
+        <svg width="60" height="42" viewBox="0 0 60 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="21" x2="60" y2="21" stroke="#30312F" stroke-width="2"/>
+          <path d="M60 21C48.402 21 39 11.598 39 0" stroke="#30312F" stroke-width="2"/>
+          <path d="M39 42C39 30.402 48.402 21 60 21" stroke="#30312F" stroke-width="2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="product-tabs" data-tab="0">
+  <div class="product-tabs__title">
+
+  </div>
+  <div class="product-tabs__content">
+
+  </div>
+</section>
+
+<div class="purchase-buttons">
+  {% for variant in product.variants %}
+    <form action="/cart/add" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="id" value="{{ variant.id }}">
+      <input type="hidden" name="quantity" value="1">
+      <button type="submit" name="add" data-available="{{ variant.available }}" data-variant="{{ variant.id }}">{{ variant.title }}</button>
+    </form>
+  {% endfor %}
+</div>
+
+{% section 'stickers' %}
+{% section 'product-grid' %}
+{% section 'side-by-side' %}
+{% section 'content-grid' %}

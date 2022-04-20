@@ -1,0 +1,133 @@
+$font-work: 'Work Sans', sans-serif;
+$font-agrandir: 'Agrandir', sans-serif;
+
+@font-face {
+  font-family: "Agrandir";
+  font-weight: 800;
+  src: url("Agrandir-GrandHeavy.woff2") format("woff2"),
+       url("Agrandir-GrandHeavy.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Agrandir";
+  font-weight: 300;
+  src: url("Agrandir-Tight.woff2") format("woff2"),
+       url("Agrandir-Tight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Agrandir";
+  font-weight: 500;
+  src: url("Agrandir-WideMedium.woff2") format("woff2"),
+       url("Agrandir-WideMedium.woff") format("woff");
+}
+
+
+// Configure rendering
+body {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-family: monospace;
+}
+
+//Reset
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 400;
+}
+
+@mixin title-extra-large () {
+  font-family: $font-agrandir;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 100%;
+
+  @include m {
+    font-size: 30px;
+    line-height: 39px;
+  }
+}
+
+@mixin title-large () {
+  font-family: $font-agrandir;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 47px;
+
+  @include m {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+@mixin title-medium () {
+  font-family: $font-agrandir;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+
+  @include m {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+@mixin body () {
+  font-family: $font-work;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+
+  @include m {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@mixin table-body () {
+  font-family: $font-agrandir;
+  font-weight: 300;
+  font-size: 29px;
+
+  @include m {
+    font-size: 12px;
+  }
+}
+
+@mixin table-title () {
+  font-family: $font-agrandir;
+  font-weight: 500;
+  font-size: 29px;
+
+  @include m {
+    font-size: 12px;
+  }
+}
+
+body {
+  @include body;
+}
+
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  
+  svg {
+    margin-right: 14px;
+    transition: transform 400ms;
+
+    @include m {
+      height: 28px;
+      width: 40px;
+      margin-right: 12px;
+    }
+  }
+}
+
+.arrow-link--rotate svg {
+  transform: rotate(360deg);
+}
