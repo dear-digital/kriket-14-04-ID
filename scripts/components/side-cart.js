@@ -23,7 +23,7 @@ export class Sidecart {
   constructor (dom) {
     this.dom = dom;
     this.container = dom.querySelector('.overlay__content__items');
-    this.remove = this.dom.dataset.remove;
+    this.removeText = this.dom.dataset.remove;
     window.sidecart = this;
     this.refresh();
   }
@@ -84,7 +84,7 @@ export class Sidecart {
               ${ item.variant_title }
             </div>
             <div class="product-cart-tile__button">
-              <a href="remove">${ this.remove }</a>
+              <a href="remove">${ this.removeText }</a>
             </div>
           </div>
           <div class="product-cart-tile__price">
