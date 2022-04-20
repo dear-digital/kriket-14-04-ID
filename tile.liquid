@@ -1,0 +1,11 @@
+<a href="{{block.settings.link}}" class="tile">
+  <img class="tile__image" src="{{ block.settings.image | img_url: "1200x" }}" alt="{{ block.settings.title }}">
+  {% unless block.settings.sticker == blank %}
+    <span class="tile__sticker">
+      {% include block.settings.sticker %}
+    </span>
+  {% endunless %}
+
+  <span class="tile__title">{{ block.settings.title }}</span>
+  <span class="tile__content">{{ block.settings.content }}</span>
+</a>

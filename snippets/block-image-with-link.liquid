@@ -1,0 +1,6 @@
+<div class="block-image-with-link">
+  <div class="block-image-with-link__inner">
+    <img src="{{ block.settings.image | img_url: "1200x", crop: 'center', scale: 2 }}" class="block-image-with-link__image"> 
+    <a class="arrow-link" href="{{ block.settings.link }}">{% include 'arrow.svg' %}</a>
+  </div>
+</div>

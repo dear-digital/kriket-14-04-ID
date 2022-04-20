@@ -1,0 +1,17 @@
+<div class="block-side-by-side">
+  <div class="block-side-by-side__column">
+    <div class="block-side-by-side__column__title">{{ block.settings.left-title }}</div>
+    <div class="block-side-by-side__column__body">{{ block.settings.left-content }}</div>
+    <div class="side-by-side__author">{{ block.settings.left-content }}</div>
+    {% unless block.settings.left-cta == blank %}
+      <a class="arrow-link" href="{{ block.settings.left-link }}">{% include 'arrow.svg' %} {{ block.settings.left-cta }}</a>
+    {% endunless %}  
+  </div>
+  <div class="block-side-by-side__column">
+    <div class="block-side-by-side__column__title">{{ block.settings.right-title }}</div>
+    <div class="block-side-by-side__column__body">{{ block.settings.right-content }}</div>
+    {% unless block.settings.right-cta == blank %}
+      <a class="arrow-link" href="{{ block.settings.right-link }}">{% include 'arrow.svg' %} {{ block.settings.right-cta }}</a>
+    {% endunless %}  
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="block-quote">
+  <div class="block-quote__inner">
+    <div class="block-quote__quote">
+      <div class="block-quote__quote__quote">
+        <span>“</span>
+        {{ block.settings.quote }}
+        <span>”</span>
+      </div>
+      <div class="block-quote__quote__credit">— {{ block.settings.credit }}</div>
+    </div>
+    {% unless block.settings.image == blank %}
+      <div class="block-quote__image">
+        <img src="{{ block.settings.image | img_url: "650x830", crop: 'center', scale: 2}}">
+      </div>
+    {% endunless %}
+  </div>
+</div>

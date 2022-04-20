@@ -1,0 +1,38 @@
+{% assign address_lines = block.settings.address | split: ","  %}
+
+<article class="dealer"
+  data-country="{{ block.settings.country }}"
+  data-province="{{ block.settings.province }}"
+  data-lon="{{ block.settings.lon }}"
+  data-lat="{{ block.settings.lat }}"
+>
+  <div class="dealer__left">
+     {{ block.settings.photo.src | img_url: "300x" | img_tag }}
+  </div>
+  <div class="dealer__right">
+    <span class="dealer__name">{{ block.settings.name }}</span>
+    <span class="dealer__address">{{ address_lines[0] }}<br>{{ address_lines[1] }}</span>
+    <span class="dealer__links">
+      {% unless  block.settings.website == blank %}
+        <a class="dealer__links__website" href="{{ block.settings.website }}" target="_blank">
+          <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="-4.37114e-08" y1="5" x2="11.8074" y2="5" stroke="#5BA55C"/>
+            <path d="M12.0731 4.97154C9.3274 4.97154 7.10156 2.74571 7.10156 0" stroke="#5BA55C"/>
+            <path d="M7.1017 10.409C7.1017 7.66334 9.32753 5.4375 12.0732 5.4375" stroke="#5BA55C"/>
+          </svg>
+
+          Website
+      </a>
+      {% endunless %}
+      <a class="dealer__links__website" href="https://maps.google.com/?q={{ block.settings.address }}" target="_blank">
+        <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="-4.37114e-08" y1="5" x2="11.8074" y2="5" stroke="#5BA55C"/>
+          <path d="M12.0731 4.97154C9.3274 4.97154 7.10156 2.74571 7.10156 0" stroke="#5BA55C"/>
+          <path d="M7.1017 10.409C7.1017 7.66334 9.32753 5.4375 12.0732 5.4375" stroke="#5BA55C"/>
+        </svg>
+
+        Google Maps
+      </a>
+    </span>
+  </div>
+</article>

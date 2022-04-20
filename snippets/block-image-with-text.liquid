@@ -1,0 +1,8 @@
+<div class="block-image-with-text block-image-with-text--{{ block.settings.layout }} block-image-with-text--{{ block.settings.image_size }}">
+  <div class="block-image-with-text__inner">
+    <div class="block-image-with-text__text">{{ block.settings.body }}</div>
+    <div class="block-image-with-text__image">
+        <img src="{{ block.settings.image | img_url: "650x830", crop: 'center', scale: 2 }}">
+    </div>
+  </div>
+</div>

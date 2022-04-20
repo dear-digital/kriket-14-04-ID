@@ -1,0 +1,22 @@
+<div class="newsletter">
+  <div class="newsletter__close">
+    <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0.707107" y1="1.29289" x2="25.7785" y2="26.3643" stroke="#5BA55C" stroke-width="2"/>
+      <line y1="-1" x2="35.4564" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 27 2)" stroke="#5BA55C" stroke-width="2"/>
+    </svg>
+  </div>
+  <div class="newsletter__title">
+    {{ settings.newsletter-title }}
+  </div>
+  <div class="newsletter__body">
+    {{ settings.newsletter-body }}
+  </div>
+  <form action="https://kriket.us19.list-manage.com/subscribe/post-json?u=67154d23a7a6c7f3e5b8b9472&amp;id=ba84bd35d5" class="mainchimp-form">
+    <input type="email" name="email" placeholder="{{ settings.newsletter-placeholder }}">
+    <button type="submit">{% include 'arrow.svg' %}</button>
+  </form>
+  <div class="newsletter__privacy">
+    {{ settings.newsletter-privacy }}
+  </div>
+  <img class="newsletter__cutie" src="{{ 'cutie.png' | asset_url }}">
+</div>

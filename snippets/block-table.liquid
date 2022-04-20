@@ -1,0 +1,25 @@
+{% assign head = block.settings.head | split: "," %}
+{% assign rows = block.settings.body | newline_to_br | split: '<br />' %}
+
+<div class="block-table">
+  <div class="block-table__title foreground--{{ block.settings.color }}">{{ block.settings.title }}</div>
+  <table>
+    <thead>
+      <tr>
+        {% for label in head %}
+          <th class="foreground--{{ block.settings.color }}">{{ label }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+        {% assign cells = row | split: "," %}
+        <tr>
+          {% for cell in cells %}
+            <td>{{ cell }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

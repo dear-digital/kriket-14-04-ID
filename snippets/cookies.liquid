@@ -1,0 +1,52 @@
+<div class="cookies">
+  <div class="cookies__title">{{ settings.cookies-title }}</div>
+  <div class="cookies__body">{{ settings.cookies-body }}</div>
+
+  <div class="cookies__list">
+    <div class="cookies__list__checkbox cookies__list__checkbox--checked">
+      <div class="cookies__list__checkbox__box">
+        <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1.6123" width="34" height="34" stroke="#EACB4A" stroke-width="2"/>
+          <path d="M0.692374 1.30462L34.6153 35.2277" stroke="#EACB4A" stroke-width="2"/>
+          <path d="M34.6155 1.99692L1.3853 35.2277" stroke="#EACB4A" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="cookies__list__checkbox__label">
+        {{ settings.cookies-list-functionality }}
+      </div>
+    </div>
+    <div class="cookies__list__checkbox">
+      <div class="cookies__list__checkbox__box">
+        <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1.6123" width="34" height="34" stroke="#EACB4A" stroke-width="2"/>
+          <path d="M0.692374 1.30462L34.6153 35.2277" stroke="#EACB4A" stroke-width="2"/>
+          <path d="M34.6155 1.99692L1.3853 35.2277" stroke="#EACB4A" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="cookies__list__checkbox__label">
+        {{ settings.cookies-list-targetting }}
+      </div>
+    </div>
+    <div class="cookies__list__checkbox">
+      <div class="cookies__list__checkbox__box">
+        <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1.6123" width="34" height="34" stroke="#EACB4A" stroke-width="2"/>
+          <path d="M0.692374 1.30462L34.6153 35.2277" stroke="#EACB4A" stroke-width="2"/>
+          <path d="M34.6155 1.99692L1.3853 35.2277" stroke="#EACB4A" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="cookies__list__checkbox__label">
+        {{ settings.cookies-list-social }}
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="cookies__accept-all">
+    <span class="cookies__accept-all__button">{{ settings.cookies-accept-all }}</span>
+    {% include 'arrow.svg' %}
+  </a>
+  <a href="#" class="cookies__accept-minimal">
+    {{ settings.cookies-accept-minimal }}
+  </a>
+</div>
+
