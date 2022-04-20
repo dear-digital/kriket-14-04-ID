@@ -1,0 +1,23 @@
+.block-centered-text {
+  margin: 0 auto 100px;
+  max-width: 680px;
+  text-align: center;
+
+  a {
+    text-decoration: underline;
+  }
+
+  @include m {
+    margin: 0 30px 60px;
+  }
+}
+
+.block-centered-text__title {
+  @include title-medium;
+  margin-bottom: 40px;
+
+  .block-centered-text--large-title & {
+    @include title-large;
+    margin-bottom: 60px;
+  }
+}

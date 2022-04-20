@@ -1,0 +1,27 @@
+.purchase-buttons {
+  text-align: center;
+}
+
+.purchase-buttons button {
+  @include title-large;
+  display: inline-block;
+  border: none;
+  -webkit-appearance: none;
+  background: transparent;
+  color: $color-orange;
+  font-size: 72px;
+  line-height: 95px;
+  height: 95px;
+  cursor: pointer;
+  width: 100%;
+
+  &:hover {
+    color: $color-black;
+  }
+
+  @include m {
+    font-size: 24px;
+    line-height: 46px;
+    height: 46px;
+  }
+}

@@ -1,0 +1,22 @@
+.page-header {
+  padding: 50px;
+  text-align: center;
+
+  @include m {
+    padding: 30px;
+  }
+}
+
+.page-header__title {
+  @include title-large;
+  margin-bottom: 20px;
+}
+
+.page-header__intro {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.page-header__eyebrow {
+  margin-bottom: 15px;
+}

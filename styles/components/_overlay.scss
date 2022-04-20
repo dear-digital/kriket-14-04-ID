@@ -1,0 +1,43 @@
+.overlay {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 480px;
+  box-sizing: border-box;
+  padding: 120px 50px;
+  color: $color-cream;
+  background: $color-blue;
+  z-index: 2000;
+  height: 100vh;
+  overflow: auto;
+  transform: translateX(100%);
+  transition: 600ms transform;
+
+  &--open {
+    transform: translateX(0);
+  }
+
+  @include m {
+    width: 100%;
+  }
+}
+
+.overlay__title {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.overlay__title__text {
+  @include title-medium;
+  flex: 1;
+
+  .nav__cart-counter {
+    left: -2px;
+  }
+}
+
+.overlay__title__close {
+  margin-left: 30px;
+  cursor: pointer;
+}

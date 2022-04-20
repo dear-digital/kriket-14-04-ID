@@ -1,0 +1,11 @@
+.jump-destination__debug {
+  display: none !important;
+
+  .shopify-editor-mode & {
+    display: block !important;
+    background: $color-orange;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+  }
+}

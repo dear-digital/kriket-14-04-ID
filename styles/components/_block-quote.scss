@@ -1,0 +1,68 @@
+.block-quote {
+  @include container;
+  margin: 0 auto 100px;
+  box-sizing: border-box;
+  padding: 0 50px;
+
+  @include m {
+    margin: 0 auto 60px;
+    padding: 0 30px;
+  }
+}
+
+.block-quote__inner {
+  display: flex;
+  justify-content: center;
+  justify-items: center; 
+
+  @include m {
+    display: block;
+  }
+}
+
+.block-quote__quote {
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  @include m {
+    margin-bottom: 30px;
+  }
+}
+
+.block-quote__quote__quote {
+  @include title-medium;
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 45px;
+
+  p {
+    display: inline;
+  }
+
+  span {
+    color: $color-green;
+  }
+}
+
+.block-quote__quote__credit {
+  text-transform: uppercase;
+}
+
+.block-quote__image {
+  flex: 1;
+
+  img {
+    display: block;
+    width: 100%;
+
+    
+  }
+} 

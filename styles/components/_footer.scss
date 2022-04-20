@@ -1,0 +1,122 @@
+.footer {
+  margin-top: 100px;
+  position: relative;
+  color: $color-green;
+  overflow: hidden;
+}
+
+.footer__banner {
+  color: $color-cream;
+  background: $color-black;
+  height: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+
+  p {
+    margin: 0;
+    white-space: pre;
+  }
+}
+
+.footer__body {
+  padding: 160px 20px 70px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 22px;
+
+  a {
+    color: $color-green;
+    display: inline-block;
+    margin: 0 15px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include m {
+      margin: 0 7px;
+      
+    }
+  }
+
+  @include m {
+    padding: 260px 30px 30px;
+  }
+}
+
+.footer__cricket {
+  position: absolute;
+  bottom: 90px;
+  right: 50px;
+  width: 84px;
+
+  &:hover .spin {
+    animation-duration: 1200ms;
+  }
+
+  @include m {
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.footer__cta {
+  position: absolute;
+  bottom: 110px;
+  left: 50px;
+
+  svg * {
+    stroke: $color-green;
+  }
+
+  @include m {
+    display: none;
+  }
+}
+
+.footer__body {
+  ul, li {
+    display: inline;
+  }
+
+  .ly-custom-0 {
+    a {
+      color: $color-green !important;
+      margin: 0 8px;
+    }
+  }
+}
+
+/*
+#drop1 {
+  transform-origin: center center;
+  animation: drop 1200ms infinite ease-in;
+}
+
+#drop2 {
+  transform-origin: center center;
+  animation: drop 1100ms infinite ease-in;
+  animation-delay: 200ms;
+}
+
+#drop3 {
+  transform-origin: center center;
+  animation: drop 1600ms infinite ease-in;
+  animation-delay: 400ms;
+}
+
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+}
+*/

@@ -1,0 +1,51 @@
+.block-about-title {
+  @include title-large;
+  display: block;
+  border-top: 2px solid $color-black;
+  max-width: 865px;
+  padding: 23px 45px 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+
+  @include m {
+    padding: 23px 30px 20px;
+  }
+
+  &:first-of-type {
+    border-top: 0;
+  }
+
+  svg {
+    display: block;
+    position: absolute;
+    top: 23px;
+    right: 45px;
+    transition: transform 200ms;
+    transform: rotate(180deg);
+    
+    @include m {
+      width: 24px;
+      height: 20px;
+      right: 30px;
+    }
+  }
+
+  &--open svg {
+    transform: rotate(0);
+  }
+}
+
+// Hack
+.block-about-title.foreground--yellow {
+  margin-bottom: 100px;
+
+  @include m {
+    margin-bottom: 60px;
+  }
+
+  &.block-about-title--open {
+    margin-bottom: 0;
+  }
+}

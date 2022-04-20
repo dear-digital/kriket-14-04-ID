@@ -1,0 +1,21 @@
+.block-large-image {
+  margin: 0 auto 100px;
+
+  @include m {
+    margin: 0 auto 60px;
+  }
+}
+
+.block-large-image__inner {
+  @include container;
+  padding: 0 50px;
+
+  @include m {
+    padding: 0;
+  }
+}
+
+.block-large-image__image {
+  display: block;
+  width: 100%;
+}

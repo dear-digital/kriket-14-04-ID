@@ -1,0 +1,71 @@
+.tile {
+  padding: 0 20px;
+  text-align: center;
+  width: calc(100% / 3);
+  box-sizing: border-box;
+  position: relative;
+
+  & > * {
+    display: block;
+  }
+
+  @include m {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.tile__image {
+  width: 100%;
+}
+
+.tile__title {
+  @include title-medium;
+}
+
+.tile__content {
+  margin: 16px auto 0;
+  max-width: 90%;
+  box-sizing: border-box;
+  p { margin: 0; }
+
+  * {
+    display: none;
+
+    &:first-child {
+      display: block;
+    }
+  }
+}
+
+.tile__sticker {
+  width: 90px;
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  transition: transform 200ms;
+
+  svg {
+    width: 100%;
+    overflow: visible;
+  }
+
+  svg #text {
+    @extend .spin;
+
+    
+  }
+
+  svg #shape {
+    @extend .spin;
+  }
+
+  @include m {
+    width: 60px;
+    right: 10px;
+  }
+}
+
+.tile__sticker:hover svg #text {
+  animation-duration: 1000ms
+}

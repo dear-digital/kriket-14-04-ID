@@ -1,0 +1,107 @@
+.block-about-pie-charts {
+  text-align: center;
+  margin: 20px auto 80px;
+  max-width: 840px;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+
+  .pie-chart {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    width: 134px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    &__percentage {
+      @include title-medium;
+      position: absolute;
+      top: 54px;
+      left: 0;
+      width: 100%;
+      color: $color-cream;
+      font-size: 18px;
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      path {
+        opacity: 0;
+      }
+    }
+
+    .background-circle {
+      opacity: 0.5;
+    }
+
+    &__label {
+      @include table-title;
+      font-size: 22px;
+      color: $color-green;
+      margin-top: 32px;
+      text-transform: uppercase;
+      height: 44px;
+      width: 200px;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      text-align: center;
+    }
+
+    &:nth-child(1) .pie-chart__overlay path:nth-child(1) { opacity: 1; }
+    &:nth-child(2) .pie-chart__overlay path:nth-child(2) { opacity: 1; }
+    &:nth-child(4) .pie-chart__overlay path:nth-child(3) { opacity: 1; }
+    &:nth-child(5) .pie-chart__overlay path:nth-child(2) { opacity: 1; }
+
+    &:nth-child(5) .pie-chart__overlay path:nth-child(2) { opacity: 1; }
+  }
+
+  &--blue .background-circle { fill: #7FB6E3; }
+  &--blue .foreground-circle { stroke: #7FB6E3; }
+
+  &--red .background-circle { fill: #D26D4B; }
+  &--red .foreground-circle { stroke: #D26D4B; }
+
+  &--yellow .background-circle { fill: #EACB4A; }
+  &--yellow .foreground-circle { stroke: #EACB4A; }
+
+  @include m {
+    display: block;
+    margin: 20px auto;
+  }  
+}
+
+.animate .pie-chart circle:last-child {
+  animation: show-pie 800ms;
+  animation-fill-mode: both;
+}
+
+.animate .pie-chart:nth-child(1) circle:last-child { animation-delay: 100ms; }
+.animate .pie-chart:nth-child(2) circle:last-child { animation-delay: 200ms; }
+.animate .pie-chart:nth-child(3) circle:last-child { animation-delay: 300ms; }
+.animate .pie-chart:nth-child(4) circle:last-child { animation-delay: 400ms; }
+.animate .pie-chart:nth-child(5) circle:last-child { animation-delay: 500ms; }
+
+
+@keyframes show-pie {
+  from {
+    opacity: 0;
+    stroke-dashoffset: 20;
+  }
+
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}

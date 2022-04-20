@@ -1,0 +1,48 @@
+.block-side-by-side {
+  @include container;
+  margin: 0 auto 100px;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 50px;
+
+  @include m {
+    display: block;
+    padding: 0 30px;
+  }
+}
+
+.block-side-by-side__column {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 0 50px;
+
+  @include m {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.block-side-by-side__column__title {
+  @include title-medium;
+  margin-bottom: 30px;
+}
+
+.block-side-by-side__column__body {
+  margin-bottom: 50px;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.block-side-by-side .arrow-link svg * {
+  stroke: $color-black !important;
+}
+
+.block-side-by-side__author {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  font-size: 10px;
+  color: $color-cream;
+}
