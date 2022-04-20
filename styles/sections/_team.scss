@@ -1,0 +1,82 @@
+.team {
+  @include container;
+  display: flex;
+  margin-bottom: 100px;
+  padding: 0 50px;
+
+  @include m {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+}
+
+.team__member {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include m {
+    width: calc(100% - 60px);
+    margin: 0 30px 60px !important;
+  }
+}
+
+.team__page-title {
+  @include container;
+  @include title-extra-large;
+  text-align: center;
+  margin: 100px auto;
+
+  @include m {
+    padding: 0 20px;
+  }
+}
+
+.team__member__image {
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.team__member__name {
+  @include title-medium;
+  margin-bottom: 6px;
+}
+
+.team__member__title {
+  @include body;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.team__member__intro {
+  height: 180px;
+  font-size: 16px;
+  padding: 0 15px;
+}
+
+.team__member__email {
+  margin-top: 28px;
+
+  font-family: $font-agrandir;
+  font-weight: 800;
+  font-size: 12px;
+
+  svg {
+    width: 40px;
+    height: 28px;
+  }
+
+  svg * {
+    stroke: $color-black;
+  }
+}

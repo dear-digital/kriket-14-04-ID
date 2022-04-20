@@ -1,0 +1,42 @@
+.product-feature {
+  @include container;
+  padding: 50px;
+
+  @include m {
+    padding: 30px;
+  }
+}
+
+.product-feature__title {
+  @include title-large;
+  margin-bottom: 30px;
+  padding-left: 50px;
+
+  @include m {
+    padding-left: 0;
+  }
+}
+
+.product-feature__subtitle {
+  @include title-medium;
+}
+
+.product-feature__content {
+  text-align: center;
+}
+
+.product-feature__image {
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.page-header + .product-feature {
+  padding-top: 0;
+  margin-top: -30px;
+
+  @include m {
+    margin-top: 0;
+  }
+}

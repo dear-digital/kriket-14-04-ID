@@ -1,0 +1,34 @@
+@import 'base/breakpoints';
+@import 'base/colors';
+@import 'base/container';
+@import 'base/typography';
+@import 'base/animations';
+
+@import 'components/**/*.scss';
+@import 'sections/**/*.scss';
+@import 'pages/**/*.scss';
+
+:root {
+  color-scheme: light dark; /* both supported */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: $color-cream;
+  color: $color-black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  padding-top: 260px;
+
+  @include m {
+    padding-top: 130px;
+  }
+}

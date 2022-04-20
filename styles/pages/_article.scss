@@ -1,0 +1,64 @@
+.article__title,
+.shopify-policy__title h1 {
+  @include title-extra-large;
+  display: block;
+  margin: 90px auto 100px;
+  max-width: 970px;
+  text-align: center;
+
+  @include m {
+    margin: 40px 30px 60px;
+  }
+} 
+
+.article__hero {
+  @include container;
+  padding: 0 50px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.article__content {
+  display: block;
+  max-width: 585px;
+  margin: 150px auto;
+
+  h2 {
+    @include title-medium;
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+
+  img {
+    margin: 100px 0;
+    width: 940px;
+    position: relative;
+    left: -177px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  blockquote {
+    @include title-large;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 115px;
+    box-sizing: border-box;
+    padding: 0 50px;
+
+    i, em {
+      @include body;
+      text-transform: uppercase;
+      font-style: normal;
+      font-size: 12px;
+      margin-top: 40px;
+      display: block;
+    }
+  }
+}

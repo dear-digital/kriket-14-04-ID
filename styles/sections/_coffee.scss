@@ -1,0 +1,84 @@
+.coffee {
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+.coffee__title {
+  @include title-extra-large;
+  margin-bottom: 40px;
+}
+
+.coffee__body {
+  margin-bottom: 60px;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.coffee__guy {
+  position: relative;
+  width: 227px;
+  margin: 0 auto 50px;
+
+  img {
+    width: 227px;
+  }
+}
+
+.coffee__guy__drops {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.coffee__spiral {
+  margin-bottom: 50px;
+}
+
+.coffee__subscribe__title {
+  @include title-extra-large;
+  color: $color-orange;
+}
+
+.coffee__subscribe__body {
+  color: $color-orange;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.coffee form {
+  max-width: 450px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  input {
+    @include body;
+    width: 100%;
+    border-radius: 10px;
+    background: $color-orange;
+    box-sizing: border-box;
+    margin-top: 12px;
+    height: 55px;
+    line-height: 55px;
+    padding: 0 17px;
+    color: $color-cream;
+    border: none;
+    
+    &::placeholder {
+      color: $color-cream;
+    }
+  }
+}
+
+.coffee__subscribe__privacy {
+  color: $color-orange;
+  font-size: 12px;
+}
+
+#shopify-section-coffee--blog {
+  padding-top: 200px;
+}

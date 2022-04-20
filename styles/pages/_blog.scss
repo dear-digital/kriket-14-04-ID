@@ -1,0 +1,11 @@
+.blog__title {
+  @include title-extra-large;
+  display: block;
+  margin: 90px auto 100px;
+  max-width: 750px;
+  text-align: center;
+
+  @include m {
+    margin: 40px 30px 60px;
+  }
+} 

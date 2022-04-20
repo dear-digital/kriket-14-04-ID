@@ -1,0 +1,12 @@
+.stickers {
+  padding: 90px 0;
+  text-align: center;
+
+  img {
+    max-width: 80%;
+  }
+
+  @include m {
+    padding: 0;
+  }
+}

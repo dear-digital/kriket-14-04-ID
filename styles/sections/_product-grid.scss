@@ -1,0 +1,30 @@
+.product-grid {
+  @include container;
+  padding: 100px;
+
+  @include m {
+    padding: 30px;
+  }
+}
+
+.product-grid__title {
+  @include title-large;
+  margin: 0;
+  margin-bottom: 40px;
+  max-width: 1100px;
+}
+
+.product-grid__tiles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+  justify-content: center;
+}
+
+.product-grid--items-2 .tile {
+  width: calc(100% / 2);
+
+  @include m {
+    width: 100%;
+  }
+}

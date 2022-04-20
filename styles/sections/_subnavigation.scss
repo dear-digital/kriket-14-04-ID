@@ -1,0 +1,26 @@
+.subnavigation {
+  padding: 90px 0;
+  text-align: center;
+  width: 100%;
+
+  @include m {
+    padding: 60px 0;
+  }
+}
+
+.subnavigation a {
+  display: inline-block;
+  height: 55px;
+  width: 250px;
+  background: $color-green;
+  color: $color-cream;
+  line-height: 55px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 0 6px;
+  transition: 200ms background-color;
+
+  &:hover {
+    background: $color-blue;
+  }
+}
