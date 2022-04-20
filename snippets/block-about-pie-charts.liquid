@@ -1,0 +1,21 @@
+<div class="block-about-pie-charts block-about-pie-charts--{{ block.settings.color }}">
+  {% unless block.settings.label-1 == blank %}
+    {% include 'pie-chart', percentage: block.settings.value-1, label: block.settings.label-1, chart: block.settings.chart-1 %}
+  {% endunless %}
+  
+  {% unless block.settings.label-2 == blank %}
+    {% include 'pie-chart', percentage: block.settings.value-2, label: block.settings.label-2, chart: block.settings.chart-2 %}
+  {% endunless %}
+
+  {% unless block.settings.label-3 == blank %}
+    {% include 'pie-chart', percentage: block.settings.value-3, label: block.settings.label-3, chart: block.settings.chart-3 %}
+  {% endunless %}
+
+  {% unless block.settings.label-4 == blank %}
+    {% include 'pie-chart', percentage: block.settings.value-4, label: block.settings.label-4, chart: block.settings.chart-4 %}
+  {% endunless %}
+
+  {% unless block.settings.label-5 == blank %}
+    {% include 'pie-chart', percentage: block.settings.value-5, label: block.settings.label-5, chart: block.settings.chart-5 %}
+  {% endunless %}
+</div>

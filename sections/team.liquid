@@ -1,0 +1,88 @@
+<section class="team">
+  {% for block in section.blocks %}
+    <article class="team__member">
+      <img class="team__member__image" src="{{ block.settings.image | img_url: "1200x" }}" alt="{{ block.settings.name }}">
+      <h3 class="team__member__name">{{ block.settings.name }}</h3>
+      <div class="team__member__title">{{ block.settings.title }}</div>
+      <div class="team__member__intro">{{ block.settings.intro }}</div>
+      <div class="team__member__email foreground--{{ block.settings.color }}">
+        <a class="arrow-link" href="mailto:{{ block.settings.email }}">{% include 'arrow.svg' %}{{ block.settings.email }}</a>
+      </div>
+    </article>
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Team Members",
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Team Member",
+      "settings": [
+        {
+          "id": "name",
+          "type": "text",
+          "label": "Name",
+          "default": "Firstname Lastname"
+        }, 
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Title",
+          "default": "Jobtitle"
+        },
+         {
+          "id": "intro",
+          "type": "text",
+          "label": "Intro",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis, dui sed sagittis dui dui fringilla."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "id": "email",
+          "type": "text",
+          "label": "Email Address",
+          "default": "info@kriket.be"
+        },
+        {
+          "type": "select",
+          "id": "color",
+          "label": "Color",
+          "options": [
+            {
+              "value": "green",
+              "label": "Green"
+            },
+            {
+              "value": "yellow",
+              "label": "Yellow"
+            },
+            {
+              "value": "orange",
+              "label": "Orange"
+            },
+            {
+              "value": "blue",
+              "label": "Blue"
+            },
+            {
+              "value": "pink",
+              "label": "Pink"
+            },
+            {
+              "value": "brown",
+              "label": "Brown"
+            }
+          ],
+          "default": "green"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

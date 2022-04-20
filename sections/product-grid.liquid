@@ -1,0 +1,79 @@
+<section class="product-grid product-grid--items-{{ section.settings.items-per-row }}">
+  <h2 class="product-grid__title">{{ section.settings.title }}</h2>
+  <div class="product-grid__tiles">
+    {% for block in section.blocks %}
+      {% include 'tile' %}
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Tile",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Title",
+          "default": "I'm the title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in neque quis sem pretium placerat.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "sticker",
+          "label": "Sticker"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "This is the main title!"
+    },
+    {
+      "type": "select",
+      "id": "items-per-row",
+      "label": "Items per row",
+      "options": [
+        {
+          "value": "2",
+          "label": "2 Items"
+        },
+        {
+          "value": "3",
+          "label": "3 Items"
+        }
+      ],
+      "default": "3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Grid",
+      "category": "Homepage Sections"
+    }
+  ]
+}
+{% endschema %}

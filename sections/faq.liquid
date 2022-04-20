@@ -1,0 +1,39 @@
+<section class="faq">
+  {% for block in section.blocks %}
+    <article class="faq__item">
+      <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10.4634" y1="24.0679" x2="10.4634" y2="0.53056" stroke="#D26D4B"/>
+        <path d="M9.91045 0.000196694C9.91045 5.47359 5.47339 9.91064 0 9.91064" stroke="#D26D4B"/>
+        <path d="M20.7498 9.91045C15.2764 9.91045 10.8394 5.47339 10.8394 0" stroke="#D26D4B"/>
+      </svg>
+      <div class="faq__item__title">{{ block.settings.title }}</div>
+      <div class="faq__item__content">{{ block.settings.content }}</div>
+    </article>
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Question",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Title",
+          "default": "Question Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in neque quis sem pretium placerat.</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

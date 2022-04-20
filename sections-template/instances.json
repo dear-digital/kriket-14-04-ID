@@ -1,0 +1,46 @@
+[
+  {
+    "template": "liquid/content-blocks.liquid",
+    "instances": [
+      "",
+      "our-story",
+      "sustainability",
+      "blog"
+    ]
+  },
+  {
+    "template": "liquid/product-grid.liquid",
+    "instances": [
+      "cart",
+      "about"
+    ]
+  },
+  {
+    "template": "liquid/content-grid.liquid",
+    "instances": [
+      "cart",
+      "about",
+      "why",
+      "journey",
+      "team",
+      "faq",
+      "sustainability"
+    ]
+  },
+  {
+    "template": "liquid/side-by-side.liquid",
+    "instances": [
+      "cart",
+      "team",
+      "about",
+      "faq"
+    ]
+  },
+  {
+    "template": "liquid/coffee.liquid",
+    "instances": [
+      "about",
+      "blog"
+    ]
+  }
+]

@@ -1,0 +1,262 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Kriket Theme 2021",
+    "theme_version": "1.0.0",
+    "theme_author": "Idle Hands",
+    "theme_documentation_url": "https://github.com/Shopify/themekit",
+    "theme_support_url": "https://github.com/Shopify/themekit/issues"
+  },
+  {
+    "name": "Announcement",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "announcement-visible",
+        "label": "Announcement Visible",
+        "default": true
+      },
+      {
+        "type": "richtext",
+        "id": "announcement-text",
+        "label": "Announcement Text",
+        "default": "<p>Out of the box granola. It’s real, it’s gracious, it’s grande, it’s there. Enjoy free shipping on all BE orders!</p>"
+      }
+    ]
+  },
+  {
+    "name": "Main Navigation",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main-navigation-menu",
+        "label": "Menu",
+        "default": "menu"
+      },
+      {
+        "type": "text",
+        "id": "main-navigation-close",
+        "label": "Close",
+        "default": "close"
+      },
+      {
+        "type": "text",
+        "id": "main-navigation-cart",
+        "label": "Cart",
+        "default": "cart"
+      },
+      {
+        "type": "text",
+        "id": "main-navigation-shop",
+        "label": "Shop",
+        "default": "shop"
+      },
+      {
+        "type": "text",
+        "id": "main-navigation-about",
+        "label": "About",
+        "default": "about"
+      },
+      {
+        "type": "text",
+        "id": "main-navigation-blog",
+        "label": "Blog",
+        "default": "blog"
+      },
+      {
+        "type": "text",
+        "id": "main-navigation-where",
+        "label": "Where to buy",
+        "default": "where to buy"
+      },
+      {
+        "type": "text",
+        "id": "main-navigation-faq",
+        "label": "Faq",
+        "default": "FAQ"
+      },
+      {
+        "type": "text",
+        "id": "main-navigation-contact",
+        "label": "Contact",
+        "default": "Contact"
+      },
+      {
+        "type": "text",
+        "id": "main-navigation-team",
+        "label": "Team",
+        "default": "Team"
+      },
+      {
+        "type": "text",
+        "id": "main-navigation-privacy",
+        "label": "Cookies & Privacy",
+        "default": "Cookie & Privacy policy"
+      },
+      {
+        "type": "text",
+        "id": "main-navigation-terms",
+        "label": "Terms & Conditions",
+        "default": "Terms & Conditions"
+      }
+    ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "type": "text",
+        "id": "cart-add",
+        "label": "Add to cart",
+        "default": "add to cart"
+      },
+      {
+        "type": "text",
+        "id": "cart-sold-out",
+        "label": "Sold out",
+        "default": "sold out"
+      },
+      {
+        "type": "text",
+        "id": "cart-special-request",
+        "label": "Special Request",
+        "default": "Any Special Requests?"
+      },
+      {
+        "type": "text",
+        "id": "cart-special-request-placeholder",
+        "label": "Special Request Placeholder",
+        "default": "Go at it!"
+      },
+      {
+        "type": "text",
+        "id": "cart-gift-wrap",
+        "label": "Gift Wrap",
+        "default": "Gift wrap my order all nice"
+      },
+      {
+        "type": "text",
+        "id": "cart-vat-invoice",
+        "label": "VAT Invoice",
+        "default": "I would like to receive a VAT invoice"
+      },
+      {
+        "type": "text",
+        "id": "cart-checkout",
+        "label": "Continue to checkout",
+        "default": "Continue to checkout"
+      },
+      {
+        "type": "text",
+        "id": "cart-empty",
+        "label": "Your cart is empty",
+        "default": "Your cart is empty"
+      },
+      {
+        "type": "text",
+        "id": "cart-remove",
+        "label": "Remove",
+        "default": "remove"
+      }
+    ]
+  },
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "footer-banner-text",
+        "label": "Footer Banner Text",
+        "default": "<p>Free shipping on all BE orders. Free shipping in EU from €40. Pay with Bancontact, Maestro, Paypal, Mastercard, Visa or iDeal.</p>"
+      },
+      {
+        "type": "text",
+        "id": "footer-cta-text",
+        "label": "Footer CTA Text",
+        "default": "What's the plan?"
+      },
+      {
+        "type": "url",
+        "id": "footer-cta-link",
+        "label": "Footer CTA Link"
+      }
+    ]
+  },
+  {
+    "name": "Newsletter",
+    "settings": [
+      {
+        "type": "text",
+        "id": "newsletter-title",
+        "label": "Title",
+        "default": "Become an expert in saving the world. Subscribe to our newsletter and get 10% off."
+      },
+      {
+        "type": "text",
+        "id": "newsletter-placeholder",
+        "label": "Email",
+        "default": "Email"
+      },
+      {
+        "type": "richtext",
+        "id": "newsletter-body",
+        "label": "Body",
+        "default": "<p>No spam, just really goood content.</p>"
+      },
+      {
+        "type": "richtext",
+        "id": "newsletter-privacy",
+        "label": "Privacy",
+        "default": "<p>By submitting this form you agree to our privacy policy.</p>"
+      }
+    ]
+  },
+  {
+    "name": "Cookies",
+    "settings": [
+      {
+        "type": "text",
+        "id": "cookies-title",
+        "label": "Title",
+        "default": "Our site uses cookies!"
+      },
+      {
+        "type": "richtext",
+        "id": "cookies-body",
+        "label": "Body",
+        "default": "<p>These cookies are necessary for the website to work properly. In addition to these, there are additional cookies that collect information about your interests and preferences.</p>"
+      },
+      {
+        "type": "richtext",
+        "id": "cookies-list-functionality",
+        "label": "Functionality",
+        "default": "<p>Functionality cookies are used to remember visitor information on the website, eg. language, timezone, enhanced content.</p>"
+      },
+      {
+        "type": "richtext",
+        "id": "cookies-list-targetting",
+        "label": "Targetting",
+        "default": "<p>Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites.</p>"
+      },
+      {
+        "type": "richtext",
+        "id": "cookies-list-social",
+        "label": "Social Media Connections",
+        "default": "<p>Social Media Connections ensure the correct interaction with the different social media so that you can, for example, share articles.</p>"
+      },
+      {
+        "type": "text",
+        "id": "cookies-accept-all",
+        "label": "Button - Accept All",
+        "default": "Accept all cookies"
+      },
+      {
+        "type": "text",
+        "id": "cookies-accept-minimal",
+        "label": "Button - Use minimal",
+        "default": "use minimal cookies"
+      }
+    ]
+  }
+]
+

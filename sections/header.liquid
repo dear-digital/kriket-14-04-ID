@@ -1,0 +1,30 @@
+<header class="header">
+  <img src="{{ section.settings.image | img_url: "1920x" }}" class="header__image" />
+  <h1 class="header__title">{{ section.settings.title }}</h1>
+  <div class="header__body">{{ section.settings.body }}</div>
+</header>
+
+{% schema %}
+{
+  "name": "Page Header",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>This is the title</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>This is the body copy</p>"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,75 @@
+<section class="coffee">
+  <h2 class="coffee__title">{{ section.settings.title }}</h2>
+  <div class="coffee__body">{{ section.settings.body }}</div>
+  <div class="coffee__guy">
+    <img src="{{ 'coffee-guy.png' | asset_url }}" />
+    <div class="coffee__guy__drops">
+      <svg width="228" height="200" viewBox="0 0 228 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="drop3">
+          <circle id="Ellipse 8" cx="156.5" cy="63.1213" r="6.14865" fill="#995442"/>
+          <path id="Polygon 1" d="M156.5 51L162.129 60.75H150.871L156.5 51Z" fill="#995442"/>
+        </g>
+        <g id="drop2">
+          <circle id="Ellipse 8_2" cx="139.5" cy="39.1213" r="6.14865" fill="#995442"/>
+          <path id="Polygon 1_2" d="M139.5 27L145.129 36.75H133.871L139.5 27Z" fill="#995442"/>
+        </g>
+        <g id="drop1">
+          <circle id="Ellipse 8_3" cx="169.5" cy="27.1213" r="6.14865" fill="#995442"/>
+          <path id="Polygon 1_3" d="M169.5 15L175.129 24.75H163.871L169.5 15Z" fill="#995442"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="coffee__spiral">
+    <svg width="88" height="87" viewBox="0 0 88 87" fill="none" xmlns="http://www.w3.org/2000/svg" class="spin">
+      <path d="M51.4314 2.08726C64.8314 2.68726 60.8314 21.4873 54.1314 16.2873C48.8314 12.1873 62.5314 3.58726 67.0314 5.58726C81.7314 12.0873 66.0314 29.6873 62.8314 22.1873C61.1314 18.1873 74.7314 10.7873 80.0314 18.9873C83.3314 24.0873 79.9314 37.4873 73.2314 35.5873C69.8314 34.5873 70.4314 30.1873 73.7314 29.6873C82.3314 29.3873 90.8314 35.1873 82.8314 42.5873C80.2314 44.8873 73.5314 49.0873 72.5314 44.7873C71.1314 38.3873 86.0314 37.8873 86.4314 50.6873C86.7314 60.0873 67.4314 56.7873 70.4314 47.9873C72.4314 42.0873 77.5314 49.6873 78.7314 53.2873C84.9314 71.3873 60.3314 73.0873 63.7314 62.7873C65.4314 57.7873 72.3314 64.5873 70.9314 70.8873C69.8314 75.8873 67.8314 78.0873 65.7314 79.5873C56.5314 85.8873 42.7314 69.5873 53.2314 68.4873C57.8314 67.9873 57.0314 77.9873 52.3314 82.1873C47.5314 86.3873 37.2314 86.4873 33.4314 76.6873C31.1314 70.5873 41.2314 63.7873 43.3314 71.8873C46.1314 82.8873 27.5314 82.9873 21.2314 77.6873C17.8314 75.0873 14.3314 68.6873 18.0314 65.6873C20.8314 63.3873 27.2314 62.2873 26.3314 66.5873C24.5314 74.4873 13.3314 73.0873 9.73138 67.4873C5.43138 60.7873 8.03138 42.4873 17.1314 45.3873C19.8314 46.2873 20.3314 49.9873 18.0314 51.3873C9.53138 56.4873 1.43138 54.2873 2.03138 47.8873C2.83138 39.6873 14.1314 32.8873 17.0314 39.8873C20.3314 47.8873 6.53138 45.3873 5.23138 39.0873C2.63138 31.6873 10.6314 29.4873 17.5314 31.4873C19.2314 31.6873 21.4314 33.4873 20.1314 35.1873C12.5314 38.9873 5.73138 25.5873 10.2314 19.3873C18.5314 8.08726 32.4314 20.1873 27.8314 24.2873C20.3314 30.9873 13.7314 11.5873 22.5314 7.98726C28.1314 5.68726 37.3314 12.3873 35.2314 14.6873C32.4314 17.6873 29.2314 14.6873 28.5314 10.6873C27.3314 -1.11274 46.8314 -0.312742 47.3314 11.9873C47.4314 15.5873 43.2314 17.1873 41.2314 14.9873C35.6314 8.88726 45.1314 1.08726 51.4314 2.08726Z" stroke="#2D2D2B" stroke-width="3" stroke-miterlimit="10"/>
+    </svg>
+  </div>
+  <h2 class="coffee__subscribe__title">{{ section.settings.subscribe-title }}</h2>
+  <div class="coffee__subscribe__body">{{ section.settings.subscribe-body }}</div>
+  <form action="https://kriket.us19.list-manage.com/subscribe/post-json?u=67154d23a7a6c7f3e5b8b9472&amp;id=ba84bd35d5" class="mainchimp-form">
+    <input type="email" name="email" placeholder="E-mail">
+  </form>
+  <div class="coffee__subscribe__privacy">
+    {{ section.settings.subscribe-privacy }}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Wanna grab a coffee?",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Wanna grab a coffee?"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>E-mail us at info@kriket.be</p>"
+    },
+    {
+      "type": "text",
+      "id": "subscribe-title",
+      "label": "Subscribe Title",
+      "default": "Sign up!"
+    },
+    {
+      "type": "richtext",
+      "id": "subscribe-body",
+      "label": "Subscribe Body",
+      "default": "<p>No spam, just really goood content ànd 10% off</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "subscribe-privacy",
+      "label": "Subscribe Privacy",
+      "default": "<p>By submitting this form you agree to our privacy policy.</p>"
+    }
+  ]
+}
+{% endschema %}
+

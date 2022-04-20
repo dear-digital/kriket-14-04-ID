@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <title>{{ page_title }}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="{{ page_description | escape }}">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https:{{ page_image | img_url }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta name="p:domain_verify" content="6b7ecb3ed431ffb4eda66dac48482a30"/>
+  <meta name="facebook-domain-verification" content="5no22unyxgi6ytonom923yoegbswlc" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  {{ content_for_header }} <!-- Header hook for plugins -->
+  
+  <link rel="icon" type="image/png" href="{{ 'favicon.png' | asset_url }}" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marquee3000@1.1.1/marquee3k.min.js" integrity="sha256-Flm9JWEjJOnkdTmfL9w4mDKgc8F9z2PIfmZ12Z9fdRk=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.0/swiper-bundle.js" integrity="sha512-AAcdxugs/pX5gkXtj10UDh6Y4+guYRya6feTmhfHMJx2P+FVPjcFxUfHLFZMDkxt9OXsG+PXKMwRVDfTnqkIjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.0/swiper-bundle.min.css" integrity="sha512-hSeEAanQ2Sh6YpHdLthlagf8R8v081TtNJX4oCxNXxwIAGOHKdzOnl270Dxrn/WHZRdwowpumZEwS16WjIi2Hw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <script>
+    window.cartLabels = {
+      'add': '{{ settings.cart-add }}',
+      'soldOut': '{{ settings.cart-sold-out }}'
+    }
+  </script>
+
+  {% if template == 'product' %}
+    <meta property="og:type" content="product" />
+    <meta property="og:url" content="{{ product.url }}"/>
+    <meta property="og:title" content="{{ product.title }}" />
+    <meta property="og:description" content="{{ product.description | strip_html }}" />
+    <meta property="og:site_name" content="kriket.be" />
+    <meta property="product:price:amount" content="{{ product.price | money_without_currency | replace: ",", "." }}" />
+    <meta property="product:price:currency" content="EUR" />
+    <meta property="og:availability" content="instock" />
+  {% endif %}
+
+  {{ 'theme.compiled.css' | asset_url | stylesheet_tag }}
+  {{ 'application.compiled.js' | asset_url | script_tag }}
+</head>
+<body class="template--{{ template }}" data-path="{{ request.path | handleize }}">
+  {% include 'announcement' %}
+  {% include 'navigation.desktop' %}
+
+  <main role="main">
+    {{ content_for_layout }}
+  </main>
+
+  <div class="overlay" id="overlay-cart" data-remove="{{ settings.cart-remove }}" data-url="{{ routes.cart_url }}">
+    <div class="overlay__title">
+      <div class="overlay__title__text">{{ settings.main-navigation-cart }} <span class="nav__cart-counter"></span></div>
+      <div class="overlay__title__close">
+        <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0.707107" y1="1.29289" x2="20.2071" y2="20.7929" stroke="#F6F4EA" stroke-width="2"/>
+          <line y1="-1" x2="27.5772" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 21 2)" stroke="#F6F4EA" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="overlay__content">
+      <div class="overlay__content__items">
+      
+      </div>
+      <div class="overlay__content__checkout">
+        <a class="arrow-link" href="{{ routes.cart_url }}">{% include 'arrow.svg' %} {{ settings.cart-checkout }}</a>
+      </div>
+    </div>
+  </div>
+
+  {% include 'footer' %}
+  {% include 'newsletter' %}
+  {% include 'cookies' %}
+</body>
+</html>

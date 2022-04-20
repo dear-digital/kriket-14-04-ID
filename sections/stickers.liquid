@@ -1,0 +1,34 @@
+{% for c in product.collections %}
+  {% for block in section.blocks %}
+    {% if c.handle == collections[block.settings.collection].handle %}
+      <section class="stickers">
+        {{ block.settings.sticker | asset_url | img_tag }}
+      </section>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+
+{% schema %}
+{
+  "name": "Stickers",
+  "blocks": [
+    {
+      "type": "sticker",
+      "name": "Sticker",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "sticker",
+          "label": "Sticker File Name"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

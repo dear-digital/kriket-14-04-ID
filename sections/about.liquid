@@ -1,0 +1,234 @@
+{% for block in section.blocks %}
+  {% include block.type %}
+{% endfor %}
+
+{% schema %}
+{
+  "name": "About Blocks",
+  "blocks": [
+    {
+      "type": "block-about-intro",
+      "name": "Intro Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "For starters, crickets are a nutritional superbomb!"
+        }
+      ]
+    },
+    {
+      "type": "block-about-title",
+      "name": "Title Block",
+      "settings": [
+         {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "select",
+          "id": "color",
+          "label": "Color",
+          "options": [
+            {
+              "value": "green",
+              "label": "Green"
+            },
+            {
+              "value": "yellow",
+              "label": "Yellow"
+            },
+            {
+              "value": "orange",
+              "label": "Orange"
+            },
+            {
+              "value": "blue",
+              "label": "Blue"
+            },
+            {
+              "value": "pink",
+              "label": "Pink"
+            },
+            {
+              "value": "brown",
+              "label": "Brown"
+            }
+          ],
+          "default": "green"
+        }
+      ]
+    },
+    {
+      "type": "block-about-pie-charts",
+      "name": "Pie Charts",
+      "settings": [
+        { "type": "number", "id": "value-1", "label": "Value 1", "default": 50 },
+        { "type": "text",   "id": "label-1", "label": "Label 1", "default": "Label" },
+        { "type": "text",   "id": "chart-1", "label": "Chart Label 1", "default": "50%" },
+
+        { "type": "number", "id": "value-2", "label": "Value 2", "default": 50 },
+        { "type": "text",   "id": "label-2", "label": "Label 2", "default": "Label" },
+        { "type": "text",   "id": "chart-2", "label": "Chart Label 2", "default": "50%" },
+
+        { "type": "number", "id": "value-3", "label": "Value 3", "default": 50 },
+        { "type": "text",   "id": "label-3", "label": "Label 3", "default": "Label" },
+        { "type": "text",   "id": "chart-3", "label": "Chart Label 3", "default": "50%" },
+
+        { "type": "number", "id": "value-4", "label": "Value 4", "default": 50 },
+        { "type": "text",   "id": "label-4", "label": "Label 4", "default": "Label" },
+        { "type": "text",   "id": "chart-4", "label": "Chart Label 4", "default": "50%" },
+
+        { "type": "number", "id": "value-5", "label": "Value 5", "default": 50 },
+        { "type": "text",   "id": "label-5", "label": "Label 5", "default": "Label" },
+        { "type": "text",   "id": "chart-5", "label": "Chart Label 5", "default": "50%" },
+
+        {
+          "type": "select",
+          "id": "color",
+          "label": "Color",
+          "options": [
+            {
+              "value": "red",
+              "label": "Red"
+            },
+            {
+              "value": "yellow",
+              "label": "Yellow"
+            },
+            {
+              "value": "blue",
+              "label": "Blue"
+            }
+          ],
+          "default": "red"
+        }
+      ]
+    },
+    {
+      "type": "block-image-with-text",
+      "name": "Image with Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Body",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis, dui sed sagittis fringilla, orci elit faucibus eros, ut molestie diam orci quis odio.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "layout",
+          "label": "Layout",
+          "options": [
+            {
+              "value": "normal",
+              "label": "Normal"
+            },
+            {
+              "value": "reverse",
+              "label": "Reverse"
+            }
+          ],
+          "default": "normal"
+        },
+        {
+          "type": "select",
+          "id": "image_size",
+          "label": "Image Size",
+          "options": [
+            {
+              "value": "normal-image",
+              "label": "Normal Image"
+            },
+            {
+              "value": "logo-image",
+              "label": "Logo Image"
+            }
+          ],
+          "default": "normal-image"
+        }
+      ]
+    },
+    {
+      "type": "block-centered-text",
+      "name": "Centered Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "This is the title"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Body",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis, dui sed sagittis fringilla, orci elit faucibus eros, ut molestie diam orci quis odio.</p>"
+        },
+        {
+          "type": "select",
+          "id": "layout",
+          "label": "Layout",
+          "options": [
+            {
+              "value": "normal",
+              "label": "Normal"
+            },
+            {
+              "value": "large-title",
+              "label": "Large Title"
+            }
+          ],
+          "default": "normal"
+        }
+      ]
+    },
+    {
+      "type": "block-about-bar-charts",
+      "name": "Inline SVG",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "svg",
+          "label": "SVG Code"
+        }
+      ]
+    },
+    {
+      "type": "block-about-footnotes",
+      "name": "Footnotes",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Body",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis, dui sed sagittis fringilla, orci elit faucibus eros, ut molestie diam orci quis odio.</p>"
+        }
+      ]
+    },
+    {
+      "type": "block-about-circular-eco",
+      "name": "Circular economy"
+    },
+    {
+      "type": "jump-destination",
+      "name": "Jump Destination",
+      "settings": [
+        {
+          "type": "text",
+          "id": "jump-id",
+          "label": "Jump Destination ID"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

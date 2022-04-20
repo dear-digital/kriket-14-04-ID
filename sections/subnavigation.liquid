@@ -1,0 +1,30 @@
+<div class="subnavigation">
+  {% for block in section.blocks %}
+    <a href="{{ block.settings.link }}">{{ block.settings.title }}</a>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Subnavigation",
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Link",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Label",
+          "default": "Label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

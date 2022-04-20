@@ -1,0 +1,77 @@
+<div class="contact">
+  {% form 'contact' %}
+    {% if form.posted_successfully? %}
+      <div class="contact__thanks">{{ section.settings.thanks }}</div>
+    {% endif %}
+    {% unless form.posted_successfully? %}
+      {{ form.errors | default_errors }}
+      <div class="contact__intro">{{ section.settings.intro }}</div>
+      <input type="text" id="ContactFormName" name="contact[name]" placeholder="{{ section.settings.label-name }}">
+      <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="{{ section.settings.label-email }}">
+      <textarea rows="10" id="ContactFormMessage" name="contact[body]" placeholder="{{ section.settings.label-message }}"></textarea>
+      <input type="submit" value="{{ section.settings.label-submit }}">
+      <div class="contact__outro">{{ section.settings.outro }}</div>
+    {% endunless %}
+  {% endform %}
+</div>
+<div class="contact__address">
+  {{ section.settings.address }}
+</div>
+
+{% schema %}
+{
+  "name": "Contact form",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro",
+      "default": "<p>Want to get in touch?</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "outro",
+      "label": "Outro",
+      "default": "<p>Or e-mail us at info@kriket.be</p>"
+    },
+    {
+      "type": "text",
+      "id": "label-name",
+      "label": "Label - Name",
+      "default": "Your name"
+    },
+    {
+      "type": "text",
+      "id": "label-email",
+      "label": "Label - Email",
+      "default": "Your email address"
+    },
+    {
+      "type": "text",
+      "id": "label-message",
+      "label": "Label - Message",
+      "default": "Your message"
+    },
+    {
+      "type": "text",
+      "id": "label-submit",
+      "label": "Label - submit",
+      "default": "Send message"
+    },
+    {
+      "type": "richtext",
+      "id": "thanks",
+      "label": "Thank You Message",
+      "default": "<p>Thank you for your contact</p>"
+    },
+     {
+      "type": "richtext",
+      "id": "address",
+      "label": "Kriket Address",
+      "default": "<p><strong>KRIKET HQ</strong><br/><br/>Aalststraat 9<br/>1000 Brussels</p>"
+    }
+  ]
+}
+{% endschema %}
+
+

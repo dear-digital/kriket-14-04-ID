@@ -1,0 +1,140 @@
+<section class="side-by-side side-by-side--layout-{{ section.settings.layout }}">
+  <div class="side-by-side__left">
+    <div class="side-by-side__left__image">
+      <img src="{{ section.settings.left-image | img_url: "650x830", crop: 'center', scale: 2 }}" alt="{{ section.settings.left-title }}">
+    </div>
+    <div class="side-by-side__left__content">
+      <h2 class="side-by-side__left__title">{{ section.settings.left-title }}</h2>
+      <div class="side-by-side__left__body">{{ section.settings.left-body }}</div>
+      <a class="arrow-link" href="{{ section.settings.left-link }}">{% include 'arrow.svg' %}{{ section.settings.left-cta }}</a>
+    </div>
+  </div>
+  <div class="side-by-side__right background--{{ section.settings.background }}">
+    <div class="side-by-side__right__content">
+      <h2 class="side-by-side__right__title">{{ section.settings.right-title }}</h2>
+      <div class="side-by-side__right__body">{{ section.settings.right-body }}</div>
+      <a class="arrow-link" href="{{ section.settings.right-link }}">{% include 'arrow.svg' %}{{ section.settings.right-cta }}</a>
+    </div>
+    <div class="side-by-side__right__image">
+      <img src="{{ section.settings.right-image | img_url: "650x330", crop: 'center', scale: 2 }}" alt="{{ section.settings.right-title }}">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Side By Side",
+  "settings": [
+    {
+      "type": "text",
+      "id": "left-title",
+      "label": "Left - Title",
+      "default": "This is the title of the left block"
+    },
+    {
+      "type": "richtext",
+      "id": "left-body",
+      "label": "Left - Body",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis, dui sed sagittis fringilla.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "left-image",
+      "label": "Left - Image"
+    },
+    {
+      "type": "text",
+      "id": "left-cta",
+      "label": "Left - CTA",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "left-link",
+      "label": "Left - CTA - Target"
+    },
+    {
+      "type": "text",
+      "id": "right-title",
+      "label": "Right - Title",
+      "default": "This is the title of the Right block"
+    },
+    {
+      "type": "richtext",
+      "id": "right-body",
+      "label": "Right - Body",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis, dui sed sagittis fringilla.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "right-image",
+      "label": "Right - Image"
+    },
+    {
+      "type": "text",
+      "id": "right-cta",
+      "label": "Right - CTA",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "right-link",
+      "label": "Right - CTA - Target"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Background Color",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "yellow",
+          "label": "Yellow"
+        },
+        {
+          "value": "orange",
+          "label": "Orange"
+        },
+        {
+          "value": "blue",
+          "label": "Blue"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "brown",
+          "label": "Brown"
+        }
+      ],
+      "default": "green"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "reverse",
+          "label": "Reverse"
+        }
+      ],
+      "default": "normal"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Side By Side",
+      "category": "Homepage Sections"
+    }
+  ]
+}
+{% endschema %}

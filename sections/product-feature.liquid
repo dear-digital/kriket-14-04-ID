@@ -1,0 +1,54 @@
+<section class="product-feature">
+  <h2 class="product-feature__title">{{ section.settings.title }}</h2>
+  <div class="product-feature__image">
+    <a href="{{ section.setting.link }}">
+      <img src={{ section.settings.image | img_url: "2000x" }} alt="{{ section.settings.subtitle }}"">
+    </a>
+  </div>
+  <div class="product-feature__content">
+    <div class="product-feature__subtitle">{{ section.settings.subtitle }}</div>
+    <div class="product-feature__body">{{ section.settings.content }}</div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Feature Product",
+  "settings": [
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Title",
+      "default": "I'm the title"
+    },
+    {
+      "id": "subtitle",
+      "type": "text",
+      "label": "Subtitle",
+      "default": "I'm the subtitle"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in neque quis sem pretium placerat.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Product",
+      "category": "Homepage Sections"
+    }
+  ]
+}
+{% endschema %}
