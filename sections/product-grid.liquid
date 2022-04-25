@@ -1,8 +1,9 @@
 <section class="product-grid product-grid--items-{{ section.settings.items-per-row }}">
   <h2 class="product-grid__title">{{ section.settings.title }}</h2>
   <div class="product-grid__tiles">
+    {%- assign tileClass = 'tile__product' -%}
     {% for block in section.blocks %}
-      {% include 'tile' %}
+      {% include 'tile', tileClass %}
     {% endfor %}
   </div>
 </section>
