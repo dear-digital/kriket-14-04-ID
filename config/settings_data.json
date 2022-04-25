@@ -343,7 +343,9 @@
           "cta": "What's the plan?",
           "link": "shopify:\/\/pages\/about",
           "hover-cta": "Click to shop",
-          "hover-link": "shopify:\/\/collections"
+          "hover-link": "shopify:\/\/collections",
+          "show_cta_button": true,
+          "cta_button_content": "Shop now"
         }
       },
       "header": {
