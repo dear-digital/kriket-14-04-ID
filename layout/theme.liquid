@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+{% comment %}ly_liquid_scripts_begin{% endcomment %}{% capture ly_liquid_content %}{% comment %}ly_liquid_scripts_end{% endcomment %}<!doctype html>
+<html{% comment %}ly_dir_replace_for_[]_begin{% endcomment %}{%- assign language_code = '_' | append: request.locale.iso_code -%}{%- if '_ar_he_fa_ur' contains language_code -%} dir="rtl" {%- endif -%}{% comment %}ly_dir_replace_end{% endcomment %}>
 <head>
   <title>{{ page_title }}</title>
   <meta charset="utf-8">
@@ -11,6 +11,7 @@
   <link rel="canonical" href="{{ canonical_url }}">
   <meta name="p:domain_verify" content="6b7ecb3ed431ffb4eda66dac48482a30"/>
   <meta name="facebook-domain-verification" content="5no22unyxgi6ytonom923yoegbswlc" />
+  <meta name="google-site-verification" content="FUkzibJNpZZCNDSODeakDl6fRWGhjK4cdrdAZXa-8GI" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   {{ content_for_header }} <!-- Header hook for plugins -->
@@ -44,7 +45,7 @@
 
   {{ 'theme.compiled.css' | asset_url | stylesheet_tag }}
   {{ 'application.compiled.js' | asset_url | script_tag }}
-</head>
+{% comment %}ly_dir_styles_begin{% endcomment %}{%- assign language_code = '_' | append: request.locale.iso_code -%}{%- if '_ar_he_fa_ur' contains language_code -%}{{- 'ly-rtl.css' | asset_url | stylesheet_tag -}}{%- endif -%}{% comment %}ly_dir_styles_end{% endcomment %}</head>
 <body class="template--{{ template }}" data-path="{{ request.path | handleize }}">
   {% include 'announcement' %}
   {% include 'navigation.desktop' %}
@@ -77,5 +78,8 @@
   {% include 'footer' %}
   {% include 'newsletter' %}
   {% include 'cookies' %}
-</body>
+  {% if settings.klaviyo_id %}
+    {% include 'klaviyo' %}
+  {% endif %}
+<!-- langify-v2-scripts-begin -->{% comment %}ly_liquid_scripts_begin{% endcomment %}{% endcapture %}{% render 'ly-liquid-scripts' content: ly_liquid_content %}{% comment %}ly_liquid_scripts_end{% endcomment %}{% comment %}ly_core_scripts_begin{% endcomment %}{% render 'ly-core-scripts' %}{% comment %}ly_core_scripts_end{% endcomment %}{% comment %}ly_switcher_factory_begin{% endcomment %}{% render 'ly-switcher-factory' %}{% comment %}ly_switcher_factory_end{% endcomment %}<!-- langify-v2-scripts-end --></body>
 </html>
