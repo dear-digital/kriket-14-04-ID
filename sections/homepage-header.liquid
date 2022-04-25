@@ -9,6 +9,14 @@
         {{ section.settings.hover-cta }}
       </span>
     </a>
+
+    {% if section.settings.show_cta_button == true %}  
+      <div class="homepage-header__title__button">
+        <a href="{{ section.settings.hover-link }}">
+          {{ section.settings.cta_button_content }}
+        </a>
+      </div>
+    {% endif %}
   </h2>
   <div class="homepage-header__cta">
     <a class="arrow-link" href="{{ section.settings.link }}">{% include 'arrow.svg' %}{{ section.settings.cta }}</a>  
@@ -96,6 +104,22 @@
       "id": "hover-link",
       "label": "Hover CTA - Target",
       "default": "/collections"
+    },
+    {
+      "type": "header",
+      "content": "Settings of the CTA in the center of the header"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cta_button",
+      "label": "Show button under text",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "cta_button_content",
+      "label": "Content of the button",
+      "default": "Shop now"
     }
   ],
   "presets": [
