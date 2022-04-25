@@ -9,7 +9,7 @@
   <div class="product-grid__tiles">
     {% for product in collection.products %}
     {% assign instructions = product.metafields.global %}
-      <a href="{{ product.url | within: collection }}" class="tile">
+      <a href="{{ product.url | within: collection }}" class="tile tile__product">
         <img class="tile__image" src="{{ product.featured_image.src | img_url: "1200x" }}" alt="{{ product.title }}">
         {% for tag in product.tags %}
           {% if tag contains 'sticker--DISABLED' %}
