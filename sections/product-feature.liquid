@@ -1,13 +1,15 @@
 <section class="product-feature">
   <h2 class="product-feature__title">{{ section.settings.title }}</h2>
-  <div class="product-feature__image">
-    <a href="{{ section.setting.link }}">
-      <img src={{ section.settings.image | img_url: "2000x" }} alt="{{ section.settings.subtitle }}"">
-    </a>
-  </div>
-  <div class="product-feature__content">
-    <div class="product-feature__subtitle">{{ section.settings.subtitle }}</div>
-    <div class="product-feature__body">{{ section.settings.content }}</div>
+  <div class="tile tile__product">
+    <div class="product-feature__image">
+      <a href="{{ section.setting.link }}">
+        <img src={{ section.settings.image | img_url: "2000x" }} alt="{{ section.settings.subtitle }}"">
+      </a>
+    </div>
+    <div class="product-feature__content">
+      <div class="product-feature__subtitle">{{ section.settings.subtitle }}</div>
+      <div class="product-feature__body">{{ section.settings.content }}</div>
+    </div>
   </div>
 </section>
 
