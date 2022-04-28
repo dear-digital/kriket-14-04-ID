@@ -1,4 +1,4 @@
-<a href="{{block.settings.link}}" class="tile">
+<a href="{{block.settings.link}}" class="tile {{ tileClass }}">
   <img class="tile__image" src="{{ block.settings.image | img_url: "1200x" }}" alt="{{ block.settings.title }}">
   {% unless block.settings.sticker == blank %}
     <span class="tile__sticker">
