@@ -1,16 +1,10 @@
-<section class="page-header">
-  <div class="page-header__eyebrow">{{ product.collections.last.title }}</div>
-  <h1 class="page-header__title">{{ product.title }}</h1>
-  <div class="page-header__intro">{{ product.description }}</div>
-</section>
-
 <section class="product-feature">
   <div class="product-feature__image">
     <div class="swiper-container">
       <div class="swiper-wrapper">
         {% for image in product.images %}
           <div class="swiper-slide">
-            <img src="{{ image.src | img_url: "2000x" }}" alt="{{ section.settings.subtitle }}"">
+            <img src="{{ image.src | img_url: "2000x" }}" alt="{{ section.settings.subtitle }}">
           </div>
         {% endfor %}
       </div>
@@ -30,6 +24,24 @@
       </button>
     </div>
   </div>
+
+  <div class="product-meta">
+    <div class="product-meta-header">
+      <div class="page-header__eyebrow">{{ product.collections.last.title }}</div>
+      <h1 class="page-header__title">{{ product.title }}</h1>
+      <div class="page-header__intro">{{ product.description }}</div>
+    </div>
+    <div class="purchase-buttons">
+      {% for variant in product.variants %}
+        <form action="/cart/add" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="id" value="{{ variant.id }}">
+          <input type="hidden" name="quantity" value="1">
+          <button type="submit" name="add" data-available="{{ variant.available }}" data-variant="{{ variant.id }}">{{ variant.title }}</button>
+        </form>
+      {% endfor %}
+    </div>
+  </div>
+
 </section>
 
 <section class="product-tabs" data-tab="0">
@@ -40,16 +52,6 @@
 
   </div>
 </section>
-
-<div class="purchase-buttons">
-  {% for variant in product.variants %}
-    <form action="/cart/add" method="post" enctype="multipart/form-data">
-      <input type="hidden" name="id" value="{{ variant.id }}">
-      <input type="hidden" name="quantity" value="1">
-      <button type="submit" name="add" data-available="{{ variant.available }}" data-variant="{{ variant.id }}">{{ variant.title }}</button>
-    </form>
-  {% endfor %}
-</div>
 
 {% section 'stickers' %}
 {% section 'product-grid' %}
