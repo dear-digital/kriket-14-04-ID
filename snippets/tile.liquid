@@ -1,12 +1,14 @@
 <div class="tile {{ tileClass }}">
-  <img class="tile__image" src="{{ block.settings.image | img_url: "1200x" }}" alt="{{ block.settings.title }}">
+  <a href="{{block.settings.link}}">
+    <img class="tile__image" src="{{ block.settings.image | img_url: "1200x" }}" alt="{{ block.settings.title }}">
+  </a>
   {% unless block.settings.sticker == blank %}
     <span class="tile__sticker">
       {% include block.settings.sticker %}
     </span>
   {% endunless %}
 
-  <span class="tile__title">{{ block.settings.title }}</span>
+  <a href="{{block.settings.link}}"><span class="tile__title">{{ block.settings.title }}</span></a>
   <span class="tile__content">{{ block.settings.content }}</span>
   
   {% assign tileProduct = block.settings.tile_product %}
