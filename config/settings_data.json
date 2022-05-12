@@ -5,6 +5,7 @@
     "cart-special-request": "Any special requests?",
     "cart-empty": "Your cart is empty. Fill it up!",
     "cart-remove": "Remove",
+    "upsell_product": "discovery-box-1",
     "footer-banner-text": "<p>                Free shipping in Benelux above €35.                 Pay with Bancontact, Maestro, Paypal, Mastercard, Visa or iDeal. <\/p>",
     "footer-cta-link": "shopify:\/\/pages\/about",
     "newsletter-title": "Become an expert on saving the world. Subscribe to our newsletter and get free shipping on your first order.",
@@ -34,8 +35,6 @@
               "content": "<p>Out of the box granola with high quality ingredients, nourishing and yummy. Turn your breakfast into a party. <em>Starting from €5,69<\/em><\/p>",
               "tile_product": "discovery-box",
               "image": "shopify:\/\/shop_images\/KRIKET_Granola_Website_DB.png",
-              "add_to_cart": "add to cart",
-              "find_out_more": "Find out more",
               "link": "shopify:\/\/products\/discovery-box",
               "sticker": "sticker-new-cc"
             }
@@ -47,8 +46,6 @@
               "content": "<p>Our bars are the all-round healthy treat, just perfect for whenever you need that extra boost. Indulge!  <em>Starting from €1,85<\/em><\/p>",
               "tile_product": "discovery-box-1",
               "image": "shopify:\/\/shop_images\/KRIKET_Bars_Website_DB_8018c811-0881-4000-9853-7cdf682b690a.png",
-              "add_to_cart": "add to cart",
-              "find_out_more": "Find out more",
               "link": "shopify:\/\/products\/discovery-box-1",
               "sticker": "sticker-improved-db"
             }
@@ -60,8 +57,6 @@
               "content": "<p>Discover the real deal: tiny little critters in all their glory covered with a finger-licking mix of spices. <em>Starting from €2,79<\/em><\/p>",
               "tile_product": "discovery-box-2",
               "image": "shopify:\/\/shop_images\/KRIKET_CrunchyCrickets_Website_DB.png",
-              "add_to_cart": "add to cart",
-              "find_out_more": "Find out more",
               "link": "shopify:\/\/collections\/crunchy-crickets",
               "sticker": "sticker-can-you-handle-db"
             }
@@ -74,7 +69,8 @@
         ],
         "settings": {
           "title": "Want to get to know the KRIKET flavours? Dive into our discovery boxes.",
-          "items-per-row": "3"
+          "items-per-row": "3",
+          "find_out_more": "Find out more"
         }
       },
       "16182984262d99cd08": {
@@ -145,8 +141,6 @@
               "content": "<p>Straightforward start to the day with crunchy hazelnuts and a note of cinnamon. Simple yet splendid. <\/p>",
               "tile_product": "the-original",
               "image": "shopify:\/\/shop_images\/KRIKET_Granola_Website_TO.png",
-              "add_to_cart": "add to cart",
-              "find_out_more": "Find out more",
               "link": "shopify:\/\/products\/the-original",
               "sticker": "sticker-new-to"
             }
@@ -158,8 +152,6 @@
               "content": "<p>Combine soft dates with crunchy pecans? That’s double the fun! We topped it off with some mild gingerbread spices. <\/p>",
               "tile_product": "double-date",
               "image": "shopify:\/\/shop_images\/KRIKET_Granola_Website_DD.png",
-              "add_to_cart": "add to cart",
-              "find_out_more": "Find out more",
               "link": "shopify:\/\/products\/double-date",
               "sticker": "sticker-new-dd"
             }
@@ -171,8 +163,6 @@
               "content": "<p>The ultimate morning treat with chocolate drops from heaven and a discrete salty touch. <\/p>",
               "tile_product": "chocolate-chirp",
               "image": "shopify:\/\/shop_images\/KRIKET_Granola_Website_CC.png",
-              "add_to_cart": "add to cart",
-              "find_out_more": "Find out more",
               "link": "shopify:\/\/products\/chocolate-chirp",
               "sticker": "sticker-new-cc"
             }
@@ -184,8 +174,6 @@
               "content": "<p>Are you that person that just can’t make up their mind? Don’t fear, we’ve got your back with our Discovery Box.<\/p>",
               "tile_product": "discovery-box",
               "image": "shopify:\/\/shop_images\/KRIKET_Granola_Website_DB.png",
-              "add_to_cart": "add to cart",
-              "find_out_more": "Find out more",
               "link": "shopify:\/\/products\/discovery-box",
               "sticker": "sticker-new-db"
             }
@@ -199,7 +187,8 @@
         ],
         "settings": {
           "title": "Our granola just got promoted to non-fiction! Click to shop.",
-          "items-per-row": "2"
+          "items-per-row": "2",
+          "find_out_more": "Find out more"
         }
       },
       "1619071748410e9e77": {
@@ -4757,8 +4746,6 @@
               "content": "<p>Your AHA moment when you're just so curious you can't choose.<\/p>",
               "tile_product": "starter-box",
               "image": "shopify:\/\/shop_images\/KRIKET_StarterBox_Website.png",
-              "add_to_cart": "add to cart",
-              "find_out_more": "Find out more",
               "link": "shopify:\/\/products\/starter-box",
               "sticker": ""
             }
@@ -4771,8 +4758,6 @@
               "content": "<p>Can you already hear the chirping? <br\/>We'd like to share our happy spring vibes with you and offer you a protein-bombed snack for free with every order before 1st of April! <\/p>",
               "tile_product": "",
               "image": "shopify:\/\/shop_images\/KRIKET_TOPPING_-_PUNCHY_PAPRIKA_-369_LS.jpg",
-              "add_to_cart": "add to cart",
-              "find_out_more": "Find out more",
               "link": "shopify:\/\/products\/free-bag-of-crunchy-crickets",
               "sticker": ""
             }
@@ -4784,7 +4769,8 @@
         ],
         "settings": {
           "title": "Discover everything yummy from the KRIKET universe.",
-          "items-per-row": "2"
+          "items-per-row": "2",
+          "find_out_more": "Find out more"
         }
       }
     },
