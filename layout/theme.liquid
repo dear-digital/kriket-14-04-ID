@@ -78,8 +78,8 @@
           <span class="subtotal-price"></span>
         </div>
         <div class="cart-subtotal">
-          <span class="subtotal-text">Free Shipping</span>
-          <span class="subtotal-text">€0,00</span>
+          <span class="subtotal-text">Shipping Price</span>
+          <span class="shipping-price">Calc. at next step</span>
         </div>
         <a href="{{ routes.cart_url }}" class="checkout-btn">{% include "icon-lock" %} proceed to checkout</a>
         <div class="upsell-product">
@@ -123,12 +123,24 @@
       $('.subtotal-price').text("€"+(subtotalPrice).toString().replace(".",","));
     }
     
+    window.updateShippingPrice = function () {
+      window.sidecart.refresh;
+      var shippingPrice = window.sidecart.data.total_price/100;
+      if(shippingPrice >= 35) {
+        $('.shipping-price').text("€0,00");
+      }
+      else {
+        $('.shipping-price').text("Calc. at next step");
+      }
+    }
+    
     $('.quick-addToCart').click(function() {
       if($(this).data('variant') != "") {
         window.sidecart.add($(this).data('variant'));
         window.overlays['overlay-cart'].open();
       }
       window.updateSubtotalPrice();
+      window.updateShippingPrice();
     });
   </script>
     
