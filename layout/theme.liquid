@@ -94,16 +94,19 @@
   {% endif %}
   
   <script>
-    $('.nav__right a:last-child').click(function() {
+    
+    function updateSubtotalPrice() {
+      window.sidecart.refresh;
       var subtotalPrice = window.sidecart.data.total_price/100;
       $('.subtotal-price').text("€"+(subtotalPrice).toString().replace(".",","));
+    }
+    
+    $('.nav__right a:last-child').click(function() {
+      updateSubtotalPrice();
     });
     
     $('.overlay__content__items').on("click", "a", function() {
-      console.log(1);
-      var subtotalPrice = window.sidecart.data.total_price/100;
-      $('.subtotal-price').text("€"+(subtotalPrice).toString().replace(".",","));
-      console.log(2);
+      updateSubtotalPrice();
     });
     
     $('.quick-addToCart').click(function() {
