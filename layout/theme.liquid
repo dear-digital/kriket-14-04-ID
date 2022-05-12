@@ -83,21 +83,22 @@
         </div>
         <a href="{{ routes.cart_url }}" class="checkout-btn">{% include "icon-lock" %} proceed to checkout</a>
         <div class="upsell-product">
+          <span class="upsell-heading">What about this little extra?</span>
           <div class="product-cart-tile" data-type="Food">
             <div class="product-cart-tile__container">
               <div class="product-cart-tile__elements">
                 <div class="product-cart-tile__image">
-                  <img src="https://cdn.shopify.com/s/files/1/0561/0186/3632/products/KRIKET_Granola_Website_DB.png?v=1620910884" alt="Discovery Box">
+                  <img src="{{ settings.upsell_product.featured_image | img_url: '280x' }}" alt="{{ settings.upsell_product.title }}">
                 </div>
                 <div class="product-cart-tile__content">
                   <p class="product-cart-tile__subtitle">
-                    Discovery Box
+                    {{ settings.upsell_product.title }}
                   </p>
                   <div class="product-cart-tile__details">
-                    3 bags (€5.99 / bag)
+                    {{ settings.upsell_product.selected_or_first_available_variant.title }}
                   </div>
                   <div class="">
-                    <button class="upsell-addToCart" data-variant="">add +</button>
+                    <button class="upsell-addToCart" data-variant="{{ settings.upsell_product.selected_or_first_available_variant.id }}" {% if settings.upsell_product.selected_or_first_available_variant.available %}{% else %}disabled="disabled"{% endif %}>add +</button>
                   </div>
                 </div>
               </div>
