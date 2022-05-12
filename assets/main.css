@@ -30,6 +30,16 @@
   margin: 0 auto;
 }
 
+.cart-subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-family: Agrandir,sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  font-size: 16px;
+}
+
 @media (min-width: 1078px) and (max-width: 1140px) {
   .quick-addToCart {
   	font-size: 22px;
