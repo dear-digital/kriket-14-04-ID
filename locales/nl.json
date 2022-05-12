@@ -1247,6 +1247,7 @@
       "title": "Niet gevonden",
       "subtext_html": "De pagina die je zoekt bestaat niet. "
     },
-    "cart-add": "toevoegen aan mandje"
+    "cart-add": "toevoegen aan mandje",
+    "cart-sold-out": "uitverkocht"
   }
 }
