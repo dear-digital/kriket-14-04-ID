@@ -157,6 +157,11 @@
         "id": "cart-remove",
         "label": "Remove",
         "default": "remove"
+      },
+      {
+        "type": "product",
+        "id": "upsell_product",
+        "label": "Upsell Product"
       }
     ]
   },
