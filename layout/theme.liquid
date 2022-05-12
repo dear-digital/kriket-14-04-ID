@@ -103,6 +103,7 @@
         .done(function( data ) {
           console.log(data);
           if (window.innerWidth > 750) {
+            window.sidecart.add($(this).data('variant'));
             window.overlays['overlay-cart'].open();
           }
         })
