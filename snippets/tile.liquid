@@ -9,7 +9,7 @@
   <span class="tile__title">{{ block.settings.title }}</span>
   <span class="tile__content">{{ block.settings.content }}</span>
   
-  {% if tile_product != blank %}
+  {% if tile_product.id != blank %}
     {% if tile_product.handle != "discovery-box-1" %}
   		{% assign tile_product_price = tile_product.selected_or_first_available_variant.price %}
   	    {% assign tile_product_id = tile_product.selected_or_first_available_variant.id %}
