@@ -42,6 +42,7 @@
 .checkout-btn {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #de9aa0;
   padding: 12px 30px 10px;
   border: none;
@@ -49,9 +50,12 @@
   color: #f6f4ea;
   font-family: Agrandir,sans-serif;
   font-weight: 800;
-  font-size: 24px;
+  font-size: 20px;
   margin: 16px auto;
   cursor: pointer;
+}
+.checkout-btn svg {
+  margin-right: 8px;
 }
 
 @media (min-width: 1078px) and (max-width: 1140px) {
