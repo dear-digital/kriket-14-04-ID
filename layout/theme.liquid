@@ -159,7 +159,7 @@
       }
     }
     
-    window.hideShowCheckout = functio() {
+    window.hideShowCheckout = function() {
       window.sidecart.refresh;
       if(window.sidecart.data.items.length > 0) {
         $('.overlay__content__checkout').addClass('no-disp');
@@ -177,6 +177,7 @@
       window.updateSubtotalPrice();
       window.updateShippingPrice();
       window.hideShowUpsell();
+      window.hideShowCheckout();
     });
   </script>
     
