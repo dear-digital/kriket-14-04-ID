@@ -159,11 +159,6 @@
         "default": "remove"
       },
       {
-        "type": "product",
-        "id": "upsell_product",
-        "label": "Upsell Product"
-      },
-      {
         "type": "text",
         "id": "subtotal_text",
         "label": "Subtotal text",
@@ -180,6 +175,17 @@
         "id": "shipping_price_text",
         "label": "Shipping Price text",
         "default": "Calc. at next step"
+      },
+      {
+        "type": "text",
+        "id": "upsell_heading",
+        "label": "Upsell Heading text",
+        "default": "What about this little extra?"
+      },
+      {
+        "type": "product",
+        "id": "upsell_product",
+        "label": "Upsell Product"
       }
     ]
   },
