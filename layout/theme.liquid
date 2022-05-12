@@ -142,6 +142,7 @@
       var isUpsell = false;
       var upsellProductId = "{{ settings.upsell_product.id }}";
       for(var i=0; i < window.sidecart.data.items.length; i++) {
+        console.log(window.sidecart.data.items[i].id)
         if(window.sidecart.data.items[i].id == upsellProductId) {
           isUpsell =  true;
         }
