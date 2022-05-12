@@ -32,7 +32,7 @@
             "settings": {
               "title": "Granola",
               "content": "<p>Out of the box granola with high quality ingredients, nourishing and yummy. Turn your breakfast into a party. <em>Starting from €5,69<\/em><\/p>",
-              "tile_product": "",
+              "tile_product": "discovery-box",
               "image": "shopify:\/\/shop_images\/KRIKET_Granola_Website_DB.png",
               "add_to_cart": "add to cart",
               "find_out_more": "Find out more",
@@ -45,7 +45,7 @@
             "settings": {
               "title": "Bars",
               "content": "<p>Our bars are the all-round healthy treat, just perfect for whenever you need that extra boost. Indulge!  <em>Starting from €1,85<\/em><\/p>",
-              "tile_product": "",
+              "tile_product": "discovery-box-1",
               "image": "shopify:\/\/shop_images\/KRIKET_Bars_Website_DB_8018c811-0881-4000-9853-7cdf682b690a.png",
               "add_to_cart": "add to cart",
               "find_out_more": "Find out more",
