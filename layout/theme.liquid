@@ -94,7 +94,7 @@
   {% endif %}
   
   <script>
-    $(document).ready(function() {
+    $('.nav__right a:last-child').click(function() {
       $('.subtotal-price').text("€"+(window.sidecart.data.total_price/100).toString().replace(".",","));
     });
     
