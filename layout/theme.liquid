@@ -100,8 +100,10 @@
     });
     
     $('.overlay__content__items').on("click", "a", function() {
+      console.log(1);
       var subtotalPrice = window.sidecart.data.total_price/100;
       $('.subtotal-price').text("€"+(subtotalPrice).toString().replace(".",","));
+      console.log(2);
     });
     
     $('.quick-addToCart').click(function() {
