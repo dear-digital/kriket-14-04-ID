@@ -95,11 +95,13 @@
   
   <script>
     $('.nav__right a:last-child').click(function() {
-      $('.subtotal-price').text("€"+(window.sidecart.data.total_price/100).toString().replace(".",","));
+      var subtotalPrice = window.sidecart.data.total_price/100;
+      $('.subtotal-price').text("€"+(subtotalPrice).toString().replace(".",","));
     });
     
     $('.overlay__content__items').on("click", "a", function() {
-      $('.subtotal-price').text("€"+(window.sidecart.data.total_price/100).toString().replace(".",","));
+      var subtotalPrice = window.sidecart.data.total_price/100;
+      $('.subtotal-price').text("€"+(subtotalPrice).toString().replace(".",","));
     });
     
     $('.quick-addToCart').click(function() {
