@@ -61,14 +61,14 @@
   width: fit-content;
   width: -moz-fit-content;
   background-color: #de9aa0;
-  padding: 12px 30px 10px;
+  padding: 12px 16px;
   border: none;
   border-radius: 30px;
   color: #f6f4ea;
   font-family: Agrandir,sans-serif;
   font-weight: 800;
-  font-size: 24px;
-  margin: 16px auto;
+  font-size: 16px;
+  margin: 8px auto 0;
   cursor: pointer;
 }
 
