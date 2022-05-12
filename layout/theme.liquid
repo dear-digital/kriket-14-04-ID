@@ -137,7 +137,7 @@
       }
     }
     
-    $('.quick-addToCart').click(function() {
+    $('.quick-addToCart, .upsell-addToCart').click(function() {
       if($(this).data('variant') != "") {
         window.sidecart.add($(this).data('variant'));
         window.overlays['overlay-cart'].open();
