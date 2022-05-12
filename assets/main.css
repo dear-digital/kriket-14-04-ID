@@ -1,0 +1,18 @@
+.marg-top-xs {
+  margin-top: 8px;
+}
+.quick-addToCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #de9aa0;
+  padding: 12px 30px 10px;
+  border-radius: 30px;
+}
+.quick-addToCart:hover {
+  background-color: #f6f4ea;
+  color: #7fb6e3;
+}
+.tile-product-link {
+  
+}
