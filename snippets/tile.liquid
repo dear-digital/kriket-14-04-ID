@@ -9,14 +9,14 @@
   <span class="tile__title">{{ block.settings.title }}</span>
   <span class="tile__content">{{ block.settings.content }}</span>
   
-  {{ block.settings.product.id }}
-  {% if block.settings.product.id %}
-    {% if product.handle != "discovery-box-1" %}
-  		{% assign tile_product_price = product.selected_or_first_available_variant.price %}
-  	    {% assign tile_product_id = product.selected_or_first_available_variant.id %}
+  {{ block.settings.tile_product.id }}
+  {% if block.settings.tile_product.id %}
+    {% if tile_product.handle != "discovery-box-1" %}
+  		{% assign tile_product_price = tile_product.selected_or_first_available_variant.price %}
+  	    {% assign tile_product_id = tile_product.selected_or_first_available_variant.id %}
   	{% else %}
-        {% assign tile_product_id = product.variants[1].id %}
-        {% assign tile_product_price = product.variants[1].price %}
+        {% assign tile_product_id = tile_product.variants[1].id %}
+        {% assign tile_product_price = tile_product.variants[1].price %}
     {% endif %}
   
   	<span class="tile__title">{{ tile_product_price }}</span>
