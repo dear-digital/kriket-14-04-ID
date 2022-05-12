@@ -4,6 +4,7 @@
     {%- assign tileClass = 'tile__product' -%}
     {% for block in section.blocks %}
       {% include 'tile', product: tile_product, tileClass %}
+    	{{ tile_product.id }}
     {% endfor %}
   </div>
 </section>
