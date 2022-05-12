@@ -39,6 +39,19 @@
   line-height: 32px;
   font-size: 16px;
 }
+.checkout-btn {
+  width: 100%;
+  background-color: #de9aa0;
+  padding: 12px 30px 10px;
+  border: none;
+  border-radius: 30px;
+  color: #f6f4ea;
+  font-family: Agrandir,sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  margin: 16px auto;
+  cursor: pointer;
+}
 
 @media (min-width: 1078px) and (max-width: 1140px) {
   .quick-addToCart {
