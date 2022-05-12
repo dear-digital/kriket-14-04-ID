@@ -14,7 +14,13 @@
   font-weight: 800;
   font-size: 24px;
   margin: 16px auto;
+  cursor: pointer;
 }
 .tile-product-link {
-  
+  padding: 12px 8px;
+  font-family: Agrandir,sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  border: 1px solid #000;
+  border-radius: 30px;
 }
