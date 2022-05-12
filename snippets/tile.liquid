@@ -31,14 +31,14 @@
 
 <script>
   $(".quick-addToCart").hover(function(){
-      var variantPrice = $(this).data('price');
-      $(this).text(variantPrice);
-    }, function(){
-      if($(this).data('available') == "yes") {
-		$(this).text("{{ section.settings.add_to_cart }}");
-      }
-      else {
-		$(this).text("{{ section.settings.sold_out }}");
-      }
-    });
+    var variantPrice = $(this).data('price');
+    $(this).text(variantPrice);
+  }, function(){
+    if($(this).data('available') == "yes") {
+      $(this).text("{{ section.settings.add_to_cart }}");
+   }
+   else {
+   	  $(this).text("{{ section.settings.sold_out }}");
+   }
+  });
 </script>
