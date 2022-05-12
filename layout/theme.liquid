@@ -73,6 +73,10 @@
       
       </div>
       <div class="overlay__content__checkout">
+        <div class="cart-subtotal">
+          <span class="subtotal-text">Subtotal</span>
+          <span class="subtotal-text">€ (window.sidecart.data.total_price/100)</span>
+        </div>
         <a class="arrow-link" href="{{ routes.cart_url }}">{% include 'arrow.svg' %} {{ settings.cart-checkout }}</a>
       </div>
     </div>
