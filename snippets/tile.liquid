@@ -22,7 +22,7 @@
     {% endif %}
   
   	<span class="tile__title marg-top-xs">{{ tile_product_price }}</span>
-  	<button class="quick-addToCart" data-variant="{{ tile_product_id }}">{{ block.settings.add_to_cart }}</button>
-  	<a href="{{block.settings.link}}" class="tile-product-link">{{ block.settings.find_out_more }}</a>
+  	<button class="quick-addToCart" data-variant="{{ tile_product_id }}">{% if tileProduct.available %}{{ section.settings.add_to_cart }}{% else %}{{ section.settings.sold_out }}{% endif %}</button>
+  	<a href="{{section.settings.link}}" class="tile-product-link">{{ block.settings.find_out_more }}</a>
   {% endif %}
 </div>
