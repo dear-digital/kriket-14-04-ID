@@ -82,5 +82,33 @@
   {% if settings.klaviyo_id %}
     {% include 'klaviyo' %}
   {% endif %}
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    
+    $('.quick-addToCart').click(function() {
+      if($(this).data('variant') != "") {
+        var formData = {
+          'items': [{
+            'id': parseInt($(this).data("variant")),
+            'quantity': 1
+          }]
+        };
+        $.ajax({
+          url: "/cart/add.js",
+          method: "POST",
+          dataType: "json",
+          data: formData,
+        })
+        .done(function( data ) {
+          console.log(data);
+        })
+        .fail(function(error) {
+          console.log( error );
+        });
+      }
+    });
+  </script>
+    
 <!-- langify-v2-scripts-begin -->{% comment %}ly_liquid_scripts_begin{% endcomment %}{% endcapture %}{% render 'ly-liquid-scripts' content: ly_liquid_content %}{% comment %}ly_liquid_scripts_end{% endcomment %}{% comment %}ly_core_scripts_begin{% endcomment %}{% render 'ly-core-scripts' %}{% comment %}ly_core_scripts_end{% endcomment %}{% comment %}ly_switcher_factory_begin{% endcomment %}{% render 'ly-switcher-factory' %}{% comment %}ly_switcher_factory_end{% endcomment %}<!-- langify-v2-scripts-end --></body>
 </html>
