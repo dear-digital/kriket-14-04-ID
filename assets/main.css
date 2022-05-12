@@ -1,3 +1,6 @@
+.no-disp {
+  display: none !important;
+}
 .marg-top-xs {
   margin-top: 8px;
 }
