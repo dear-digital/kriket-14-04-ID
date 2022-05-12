@@ -117,7 +117,7 @@
   
   <script>
     
-    function updateSubtotalPrice() {
+    window.updateSubtotalPrice = function () {
       console.log("hi");
       window.sidecart.refresh;
       var subtotalPrice = window.sidecart.data.total_price/100;
