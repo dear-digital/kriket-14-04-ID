@@ -11,7 +11,7 @@
   
   {% if block.settings.tile_product.id %}
     {% if tile_product.handle != "discovery-box-1" %}
-  		{% assign tile_product_price = tile_product.selected_or_first_available_variant.price | money %}
+  		{% assign tile_product_price = tile_product.selected_or_first_available_variant.variant_price | money %}
   	    {% assign tile_product_id = tile_product.selected_or_first_available_variant.id %}
   	{% else %}
         {% assign tile_product_id = tile_product.variants[1].id %}
