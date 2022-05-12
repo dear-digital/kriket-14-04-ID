@@ -169,13 +169,6 @@
       }
     }
     
-    $(document).ready(function() {
-      window.updateSubtotalPrice();
-      window.updateShippingPrice();
-      window.hideShowUpsell();
-      window.hideShowCheckout();
-    });
-    
     $('.quick-addToCart, .upsell-addToCart').click(function() {
       if($(this).data('variant') != "") {
         window.sidecart.add($(this).data('variant'));
