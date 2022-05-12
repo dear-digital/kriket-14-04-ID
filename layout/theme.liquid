@@ -159,6 +159,16 @@
       }
     }
     
+    window.hideShowCheckout = functio() {
+      window.sidecart.refresh;
+      if(window.sidecart.data.items.length > 0) {
+        $('.overlay__content__checkout').addClass('no-disp');
+      }
+      else {
+        $('.overlay__content__checkout').removeClass('no-disp');
+      }
+    }
+    
     $('.quick-addToCart, .upsell-addToCart').click(function() {
       if($(this).data('variant') != "") {
         window.sidecart.add($(this).data('variant'));
