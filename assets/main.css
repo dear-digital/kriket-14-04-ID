@@ -101,3 +101,8 @@
   	font-size: 16px;
   }
 }
+@media (max-width: 560px) {
+  .checkout-btn {
+    font-size: 16px;
+  }
+}
