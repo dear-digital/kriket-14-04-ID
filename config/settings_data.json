@@ -143,7 +143,7 @@
             "settings": {
               "title": "The Original",
               "content": "<p>Straightforward start to the day with crunchy hazelnuts and a note of cinnamon. Simple yet splendid. <\/p>",
-              "tile_product": "",
+              "tile_product": "the-original",
               "image": "shopify:\/\/shop_images\/KRIKET_Granola_Website_TO.png",
               "add_to_cart": "add to cart",
               "find_out_more": "Find out more",
@@ -156,7 +156,7 @@
             "settings": {
               "title": "Double Date",
               "content": "<p>Combine soft dates with crunchy pecans? That’s double the fun! We topped it off with some mild gingerbread spices. <\/p>",
-              "tile_product": "",
+              "tile_product": "double-date",
               "image": "shopify:\/\/shop_images\/KRIKET_Granola_Website_DD.png",
               "add_to_cart": "add to cart",
               "find_out_more": "Find out more",
@@ -169,7 +169,7 @@
             "settings": {
               "title": "Chocolate Chirp",
               "content": "<p>The ultimate morning treat with chocolate drops from heaven and a discrete salty touch. <\/p>",
-              "tile_product": "",
+              "tile_product": "chocolate-chirp",
               "image": "shopify:\/\/shop_images\/KRIKET_Granola_Website_CC.png",
               "add_to_cart": "add to cart",
               "find_out_more": "Find out more",
@@ -182,7 +182,7 @@
             "settings": {
               "title": "Discovery Box",
               "content": "<p>Are you that person that just can’t make up their mind? Don’t fear, we’ve got your back with our Discovery Box.<\/p>",
-              "tile_product": "",
+              "tile_product": "discovery-box",
               "image": "shopify:\/\/shop_images\/KRIKET_Granola_Website_DB.png",
               "add_to_cart": "add to cart",
               "find_out_more": "Find out more",
