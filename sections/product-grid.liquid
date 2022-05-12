@@ -3,7 +3,7 @@
   <div class="product-grid__tiles">
     {%- assign tileClass = 'tile__product' -%}
     {% for block in section.blocks %}
-      {% include 'tile', tile_product, tileClass %}
+      {% include 'tile', tile_product: tile_product, tileClass %}
     {% endfor %}
   </div>
 </section>
