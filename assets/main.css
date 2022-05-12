@@ -17,10 +17,13 @@
   cursor: pointer;
 }
 .tile-product-link {
-  padding: 12px 8px;
+  width: fit-content;
+  width: -moz-fit-content;
+  padding: 12px;
   font-family: Agrandir,sans-serif;
   font-weight: 400;
   font-size: 18px;
   border: 1px solid #000;
-  border-radius: 30px;
+  border-radius: 16px;
+  margin: 16px auto;
 }
