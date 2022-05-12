@@ -102,6 +102,9 @@
         })
         .done(function( data ) {
           console.log(data);
+          if (window.innerWidth > 750) {
+            window.overlays['overlay-cart'].open();
+          }
         })
         .fail(function(error) {
           console.log( error );
