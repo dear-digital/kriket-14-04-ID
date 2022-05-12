@@ -20,7 +20,7 @@
     {% endif %}
   
   	<span class="tile__title">{{ tile_product_price }}</span>
-  	<button class="quick-addToCart" data-variant="{{ tile_product_id }}">{{ add_to_cart }}</button>
-  	<a href="{{ tile_product.url }}" class="tile-product-link">{{ find_out_more }}</a>
+  	<button class="quick-addToCart" data-variant="{{ tile_product_id }}">{{ block.settings.add_to_cart }}</button>
+  	<a href="{{ tileProduct.url }}" class="tile-product-link">{{ block.settings.find_out_more }}</a>
   {% endif %}
 </a>
