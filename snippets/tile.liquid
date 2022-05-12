@@ -12,6 +12,7 @@
   <span class="tile__content">{{ block.settings.content }}</span>
   
   {% assign tileProduct = block.settings.tile_product %}
+  
   {% if tileProduct.id %}
     {% if tileProduct.handle != "discovery-box-1" %}
   	    {% assign tile_product_id = tileProduct.selected_or_first_available_variant %}
@@ -33,6 +34,7 @@
     </button>
   	<a href="{{block.settings.link}}" class="tile-product-link">{{ section.settings.find_out_more }}</a>
   {% endif %}
+  
 </div>
 
 <script>
