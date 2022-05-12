@@ -98,6 +98,10 @@
       $('.subtotal-price').text("€"+(window.sidecart.data.total_price/100).toString().replace(".",","));
     });
     
+    $('.overlay__content__items').on("click", "a", function() {
+      $('.subtotal-price').text("€"+(window.sidecart.data.total_price/100).toString().replace(".",","));
+    });
+    
     $('.quick-addToCart').click(function() {
       if($(this).data('variant') != "") {
         window.sidecart.add($(this).data('variant'));
