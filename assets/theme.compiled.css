@@ -2049,7 +2049,8 @@ body.template--index:not(.scrolled) .nav__center svg path:nth-child(22), body.na
   top: 0;
   width: 480px;
   box-sizing: border-box;
-  padding: 120px 40px;
+  padding: 40px;
+/*   padding: 120px 40px; */
   color: #F6F4EA;
   background: #7FB6E3;
   z-index: 2000;
@@ -2240,7 +2241,7 @@ body.template--index:not(.scrolled) .nav__center svg path:nth-child(22), body.na
 }
 
 .overlay__content__checkout {
-  margin-top: 120px;
+  padding-top: 20px;
 }
 
 .tile {
