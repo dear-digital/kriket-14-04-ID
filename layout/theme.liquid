@@ -144,7 +144,7 @@
       console.log(upsellProductId)
       for(var i=0; i < window.sidecart.data.items.length; i++) {
         console.log(window.sidecart.data.items[i].id)
-        if(window.sidecart.data.items[i].id == upsellProductId) {
+        if(window.sidecart.data.items[i].id.toString() == upsellProductId) {
           isUpsell =  true;
         }
         else {
