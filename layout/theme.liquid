@@ -118,28 +118,17 @@
   <script>
     
     window.updateSubtotalPrice = function () {
-      console.log("hi");
       window.sidecart.refresh;
       var subtotalPrice = window.sidecart.data.total_price/100;
-      console.log("subtotalPrice : "+subtotalPrice);
       $('.subtotal-price').text("€"+(subtotalPrice).toString().replace(".",","));
-      console.log("bye");
     }
-    
-    $('.nav__right a:last-child').click(function() {
-      updateSubtotalPrice();
-    });
-    
-    $('.overlay__content__items').on("click", "a", function() {
-      updateSubtotalPrice();
-    });
     
     $('.quick-addToCart').click(function() {
       if($(this).data('variant') != "") {
         window.sidecart.add($(this).data('variant'));
         window.overlays['overlay-cart'].open();
       }
-      updateSubtotalPrice();
+      window.updateSubtotalPrice();
     });
   </script>
     
