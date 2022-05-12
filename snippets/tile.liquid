@@ -9,6 +9,7 @@
   <span class="tile__title">{{ block.settings.title }}</span>
   <span class="tile__content">{{ block.settings.content }}</span>
   
+  {{ product.id }}
   {% if product.id %}
     {% if product.handle != "discovery-box-1" %}
   		{% assign tile_product_price = product.selected_or_first_available_variant.price %}
@@ -22,7 +23,4 @@
   	<button class="quick-addToCart" data-variant="{{ tile_product_id }}">{{ add_to_cart }}</button>
   	<a href="{{ tile_product.url }}" class="tile-product-link">{{ find_out_more }}</a>
   {% endif %}
-  <span class="tile__title">{{ tile_product_price }}</span>
-  	<button class="quick-addToCart" data-variant="{{ tile_product_id }}">{{ add_to_cart }}</button>
-  	<a href="{{ tile_product.url }}" class="tile-product-link">{{ find_out_more }}</a>
 </a>
