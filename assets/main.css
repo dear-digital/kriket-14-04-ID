@@ -27,3 +27,14 @@
   border-radius: 16px;
   margin: 0 auto;
 }
+
+@media (min-width: 1080px) and (max-width: 1140px) {
+  .quick-addToCart {
+  	font-size: 22px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1079px) {
+  .quick-addToCart {
+  	font-size: 20px;
+  }
+}
