@@ -95,7 +95,7 @@
   
   <script>
     $(document).ready(function() {
-      $('.subtotal-price').text("€"+(window.sidecart.data.total_price/100).replace(".",","));
+      $('.subtotal-price').text("€"+(window.sidecart.data.total_price/100).toString().replace(".",","));
     });
     
     $('.quick-addToCart').click(function() {
