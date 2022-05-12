@@ -57,6 +57,9 @@
 .checkout-btn svg {
   margin-right: 8px;
 }
+.upsell-product {
+  border-top: 2px solid #fff;
+}
 .upsell-addToCart {
   width: fit-content;
   width: -moz-fit-content;
