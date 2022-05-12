@@ -85,31 +85,10 @@
   
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script>
-    
     $('.quick-addToCart').click(function() {
       if($(this).data('variant') != "") {
-//         var formData = {
-//           'items': [{
-//             'id': parseInt($(this).data("variant")),
-//             'quantity': 1
-//           }]
-//         };
-//         $.ajax({
-//           url: "/cart/add.js",
-//           method: "POST",
-//           dataType: "json",
-//           data: formData,
-//         })
-//         .done(function( data ) {
-//           console.log(data);
-          if (window.innerWidth > 750) {
-            window.sidecart.add($(this).data('variant'));
-            window.overlays['overlay-cart'].open();
-          }
-//         })
-//         .fail(function(error) {
-//           console.log( error );
-//         });
+        window.sidecart.add($(this).data('variant'));
+        window.overlays['overlay-cart'].open();
       }
     });
   </script>
