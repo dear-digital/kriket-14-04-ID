@@ -44,6 +44,7 @@
   {% endif %}
 
   {{ 'theme.compiled.css' | asset_url | stylesheet_tag }}
+  {{ 'main.css' | asset_url | stylesheet_tag }}
   {{ 'application.compiled.js' | asset_url | script_tag }}
 {% comment %}ly_dir_styles_begin{% endcomment %}{%- assign language_code = '_' | append: request.locale.iso_code -%}{%- if '_ar_he_fa_ur' contains language_code -%}{{- 'ly-rtl.css' | asset_url | stylesheet_tag -}}{%- endif -%}{% comment %}ly_dir_styles_end{% endcomment %}</head>
 <body class="template--{{ template }}" data-path="{{ request.path | handleize }}">
