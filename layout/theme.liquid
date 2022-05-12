@@ -74,17 +74,17 @@
       </div>
       <div class="overlay__content__checkout">
         <div class="cart-subtotal">
-          <span class="subtotal-text">Subtotal</span>
+          <span class="subtotal-text">{{ settings.subtotal_text }}</span>
           <span class="subtotal-price"></span>
         </div>
         <div class="cart-subtotal">
-          <span class="subtotal-text">Shipping Price</span>
-          <span class="shipping-price">Calc. at next step</span>
+          <span class="subtotal-text">{{ settings.shipping_text }}</span>
+          <span class="shipping-price">{{ settings.shipping_price_text }}</span>
         </div>
         <a href="{{ routes.cart_url }}" class="checkout-btn">{% include "icon-lock" %} proceed to checkout</a>
         {% if settings.upsell_product.id != blank %}
         <div class="upsell-product">
-          <p class="upsell-heading">What about this little extra?</p>
+          <p class="upsell-heading">{{ settings.upsell_heading }}</p>
           <div class="product-cart-tile" data-type="{{ settings.upsell_product.type }}">
             <div class="product-cart-tile__container">
               <div class="product-cart-tile__elements">
