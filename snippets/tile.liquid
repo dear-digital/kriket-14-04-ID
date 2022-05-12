@@ -14,17 +14,17 @@
   {% assign tileProduct = block.settings.tile_product %}
   {% if tileProduct.id %}
     {% if tileProduct.handle != "discovery-box-1" %}
-  	    {% assign tile_product_id = tileProduct.selected_or_first_available_variant.id %}
+  	    {% assign tile_product_id = tileProduct.selected_or_first_available_variant %}
   		{% assign tile_variant_name = tileProduct.selected_or_first_available_variant.title %}
   		{% assign tile_product_price = tileProduct.selected_or_first_available_variant.price | money %}
   	{% else %}
-        {% assign tile_product_id = tileProduct.variants[1].id %}
+        {% assign tile_product_id = tileProduct.variants[1] %}
   		{% assign tile_variant_name = tileProduct.variants[1].title %}
         {% assign tile_product_price = tileProduct.variants[1].price | money %}
     {% endif %}
   
   	<span class="tile__title marg-top-xs">{{ tile_variant_name }}</span>
-  	<button class="quick-addToCart" data-variant="{{ tile_product_id }}" data-price="{{ tile_product_price }}" data-available="{{ tileProduct.available }}">{% if tileProduct.available %}{{ section.settings.add_to_cart }}{% else %}{{ section.settings.sold_out }}{% endif %}</button>
+  	<button class="quick-addToCart" data-variant="{{ tile_product_id.id }}" data-price="{{ tile_product_price }}" data-available="{{ tileProduct.available }}">{% if tile_product_id.available %}{{ section.settings.add_to_cart }}{% else %}{{ section.settings.sold_out }}{% endif %}</button>
   	<a href="{{block.settings.link}}" class="tile-product-link">{{ section.settings.find_out_more }}</a>
   {% endif %}
 </div>
