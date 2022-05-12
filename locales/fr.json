@@ -46,7 +46,10 @@
         "checkout_context": {
           "step_one": "%{shop_name} - Paiement"
         },
-        "tooltip_accessibility_label": "En savoir plus"
+        "tooltip_accessibility_label": "En savoir plus",
+        "errors": {
+          "session_identifier_not_unique_error": "Une erreur s'est produite avec votre commande. Essayez à nouveau de la payer."
+        }
       },
       "contact": {
         "title": "Informations",
@@ -184,6 +187,8 @@
         "shipping_policy_link": "Coûts d'expédition",
         "taxes_label": "Taxes",
         "estimated_taxes_label": "Taxes (estimation)",
+        "information_estimated_taxes_label": "Taxes (estimation)",
+        "estimated_taxes_finalization_tooltip_content": "La taxe et le total définitifs seront confirmés par e–mail ou par SMS après avoir passé la commande.",
         "total_label": "Total",
         "total_outstanding_label": "Montant à payer",
         "partial_total_label": "Total",
@@ -218,7 +223,17 @@
         "recurring_total_label": "Total récurrent",
         "recurring_total_tooltip": "N'inclut pas les frais d'expédition, les taxes, les frais de douane ou les réductions applicables.",
         "confirmation_number_label": "Confirmation n° %{confirmation_number}",
-        "higher_value_discount_already_applied": "Une remise plus importante a déjà été appliquée."
+        "higher_value_discount_already_applied": "Une remise plus importante a déjà été appliquée.",
+        "percent_off_shipping": "%{percent} % de réduction sur les frais d'expédition",
+        "amount_off_shipping": "%{amount} de réduction sur les frais d'expédition",
+        "deferred_payment_info": {
+          "title": "Le paiement de %{amount_due} est dû le %{due_at}",
+          "description_html": "Si vous avez des questions à propos de votre commande, %{contact_us}."
+        },
+        "payment_terms_totals": {
+          "due_today": "Total dû aujourd'hui",
+          "due_later": "Total dû %{due_at}"
+        }
       },
       "shipping": {
         "title": "Livraison",
@@ -240,6 +255,12 @@
           "other": "%{count} jours ouvrables"
         },
         "estimated_delivery_date_range": "%{minimum} à %{maximum} jours ouvrables",
+        "estimated_delivery_time": "Livraison prévue le %{time}",
+        "estimated_delivery_time_range": "Livraison prévue entre le %{min_time} et le %{max_time}",
+        "arrives_time": "Arrivée à %{time}",
+        "arrives_time_range": "Arrivée entre %{min_time}–%{max_time}",
+        "estimated_time": "Prévue le %{time}",
+        "estimated_time_range": "Prévue entre %{min_time} et %{max_time}",
         "shipping_line_phone_label": "Numéro de téléphone mobile (obligatoire)",
         "shipping_line_phone": "Il est possible que le transporteur utilise ce numéro pour vous contacter.",
         "shipping_line_delivery_phone_label": "Téléphone mobile",
@@ -296,9 +317,7 @@
             "other": "Pour les %{count} premières commandes"
           }
         },
-        "one_time_purchase_shipping": "Expédition ponctuelle",
-        "estimated_delivery_time": "Livraison prévue le %{time}",
-        "estimated_delivery_time_range": "Livraison prévue entre le %{min_time} et le %{max_time}"
+        "one_time_purchase_shipping": "Expédition ponctuelle"
       },
       "localized_fields": {
         "additional_information": {
@@ -320,6 +339,10 @@
         "gift_card_balance_label": "Balance:",
         "supported_card_brands_more_label": "et plus…",
         "detected_card_brand": "Marque de carte détectée: {brand}",
+        "credit_card_vaulting_sign_in_banner_title": "Enregistrez votre carte de crédit",
+        "credit_card_vaulting_sign_in_banner_info": "Connectez-vous ou créez un compte pour enregistrer votre carte de crédit pour vos prochains achats",
+        "credit_card_vaulting_sign_in_banner_button_label": "Se connecter",
+        "ftd_vault_credit_card_label": "Enregistrer ma carte de crédit pour un paiement plus rapide",
         "card_number_label": "Numéro de carte",
         "card_number_placeholder": "Numéro de carte",
         "card_pay_with": "Paye avec :",
@@ -328,12 +351,18 @@
         "card_information_notice": "Toutes les transactions sont sécurisées et chiffrées. Les informations de carte de crédit ne sont jamais enregistrées.",
         "name_on_card_label": "Nom sur la carte",
         "name_on_card_placeholder": "Nom sur la carte",
+        "card_expired": "Expiré",
         "card_expiry_label": "Date d'expiration (MM\/ AA)",
         "card_expiry_placeholder": "Date d'expiration (MM\/AA)",
         "credit_card_start_month": "Mois d'émission",
         "credit_card_start_year": "Année d'émission",
+        "delete_customer_mandate_modal_title": "Supprimer cette carte ?",
+        "delete_customer_mandate_modal_body": "Cette opération est irréversible.",
+        "delete_customer_mandate_modal_confirm": "Oui, supprimer cette carte",
+        "delete_customer_mandate_modal_cancel": "Annuler",
         "card_verification_value_label": "Code de sécurité",
         "card_verification_value_placeholder": "Code de sécurité",
+        "card_verification_confirm": "Pour des raisons de vérification, veuillez saisir le code de sécurité de votre carte.",
         "card_expiry_date_explanation": "Date d'expiration de la carte dans le format : mois, mois, année, année",
         "card_expiration_month_label": "Mois d'expiration",
         "card_expiration_year_label": "Année d'expiration",
@@ -348,10 +377,15 @@
         "card_update_label": "Mettre à jour la carte",
         "ends_with_label": "se terminant par %{last_digits}",
         "masked_digits_label": "•••• %{last_digits}",
+        "expiry_long": "(Expire le %{month}\/%{year})",
+        "expiry_short": "(Exp %{month}\/%{year})",
         "saved_by_payment_method": "Enregistré par %{payment_method}",
         "pay_with_payment_method": "Payer avec %{payment_method}",
+        "different_credit_card_label": "Essayer une autre carte de crédit",
         "same_billing_address_label": "Identique à l'adresse de livraison",
         "different_billing_address_label": "Utiliser une adresse de facturation différente",
+        "billing_address_associated_with_mandate": "Utiliser l'adresse associée au moyen de paiement",
+        "billing_address_associated_with_mandate_info": "Si vous souhaitez modifier votre adresse de facturation, veuillez supprimer et ressaisir les informations de votre carte de crédit",
         "free_order_notice_html": "Ta commande est <strong>gratuite<\/strong>. Aucun paiement n'est requis.",
         "express_checkout_free_order": "Tu ne seras pas facturé pour une commande gratuite",
         "order_covered_by_gift_cards_notice": {
@@ -377,6 +411,8 @@
         "billing_address_not_supported_for_payment_method_error": "Ce moyen de paiement n'est pas disponible pour ta devise et adresse de facturation. Essaie un autre type de paiement.",
         "generic_incorrect_card_info": "Les détails de ton paiement n'ont pas pu être vérifiés. Vérifie les informations de ta carte et réessaye.",
         "sofort_label": "Sofort",
+        "paypal_label": "PayPal",
+        "klarna_label": "Klarna",
         "klarna_pay_later_label": "Payer plus tard avec Klarna",
         "klarna_pay_now_label": "Payez maintenant avec Klarna",
         "bancontact_label": "Bancontact",
@@ -385,6 +421,8 @@
         "ideal_label": "iDEAL",
         "bank_picker_label": "Banque",
         "subscription_card_update_agreement_label": "Le changement du moyen de paiement mettra à jour ton abonnement et tes futurs paiements récurrents.",
+        "subscription_agreement_label": "Je comprends que je suis en train d'accepter un abonnement. Celui-ci se renouvellera au prix et à la fréquence indiqués et ce, jusqu'à ce qu'il prenne fin ou soit %{cancelled}.",
+        "subscription_agreement_cancelled": "résilié",
         "subscription_agreement_label_html": "Je comprends que je suis en train d'accepter un abonnement. Celui-ci se renouvellera au prix et à la fréquence indiqués, et ce, jusqu'à ce qu'il prenne fin ou soit\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">annulé<\/a>.\n",
         "change_currency_section_description": "Sélectionnez une option de devise",
         "no_real_orders_dev_store": "Cette boutique ne peut accepter ni les commandes réelles ni les paiements réels.",
@@ -395,31 +433,17 @@
         "paypal": {
           "connect": "Clique pour connecter ton compte PayPal"
         },
-        "subscription_agreement_label": "Je comprends que je suis en train d'accepter un abonnement. Celui-ci se renouvellera au prix et à la fréquence indiqués et ce, jusqu'à ce qu'il prenne fin ou soit %{cancelled}.",
-        "subscription_agreement_cancelled": "résilié",
-        "ftd_vault_credit_card_label": "Enregistrer ma carte de crédit pour un paiement plus rapide",
-        "card_expired": "Expiré",
-        "different_credit_card_label": "Essayer une autre carte de crédit",
         "apple": {
           "connect": "Cliquez pour connecter votre compte Apple Pay",
-          "not_available": "Apple Pay n'est pas disponible sur ce navigateur. Pour connecter votre compte Apple Pay, vous devrez utiliser Safari sur un appareil Apple.",
-          "email_connected": "Compte connecté : "
+          "not_available": "Apple Pay n'est pas disponible sur ce navigateur. Pour connecter votre compte Apple Pay, vous devrez utiliser Safari sur un appareil Apple."
+        },
+        "google": {
+          "connect": "Cliquez pour connecter avec votre compte Google Pay",
+          "error_authorizing": "Erreur lors de l'autorisation du paiement"
         },
         "account_connected": "Compte connecté",
-        "delete_customer_mandate_modal_title": "Supprimer cette carte ?",
-        "delete_customer_mandate_modal_body": "Cette opération est irréversible.",
-        "delete_customer_mandate_modal_confirm": "Oui, supprimer cette carte",
-        "delete_customer_mandate_modal_cancel": "Annuler",
-        "card_verification_confirm": "Pour des raisons de vérification, veuillez saisir le code de sécurité de votre carte.",
-        "maximum_vaulted_card_info": {
-          "one": "Vous pouvez enregistrer jusqu'à %{count} carte de crédit sur votre compte.",
-          "other": "Vous pouvez enregistrer jusqu'à %{count} cartes de crédit sur votre compte."
-        },
-        "billing_address_associated_with_mandate": "Utiliser l'adresse associée au moyen de paiement",
-        "billing_address_associated_with_mandate_info": "Si vous souhaitez modifier votre adresse de facturation, veuillez supprimer et ressaisir les informations de votre carte de crédit",
-        "credit_card_vaulting_sign_in_banner_title": "Enregistrez votre carte de crédit",
-        "credit_card_vaulting_sign_in_banner_info": "Connectez-vous ou créez un compte pour enregistrer votre carte de crédit pour vos prochains achats",
-        "credit_card_vaulting_sign_in_banner_button_label": "Se connecter"
+        "email_connected": "Compte connecté : ",
+        "mor_disclaimer_html": "En cliquant ci–dessous et en finalisant votre commande, vous acceptez d’acheter vos articles auprès de Flow.io en tant que Merchant of Record\npour cette transaction, conformément aux <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Conditions générales d’utilisation<\/a>\net à la <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Politique de confidentialité<\/a> de Flow.io. Flow.io est un fournisseur international de\nservices de traitement des commandes pour %{shop_name}\n"
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "Solde actuel %{amount}",
@@ -436,18 +460,38 @@
         "email_or_phone_blank": "Entre une adresse e-mail ou un numéro de téléphone mobile",
         "email_or_phone_invalid": "Entre une adresse e-mail ou un numéro de téléphone mobile valide",
         "address_first_name_blank": "Entre un prénom",
+        "address_first_name_too_long": "Le prénom est trop long (le maximum est de 255 caractères)",
+        "address_first_name_contains_emojis": "Le prénom ne peut pas contenir d’emojis",
+        "address_first_name_contains_html_tags": "Le prénom ne peut pas contenir de balises HTML.",
         "address_last_name_blank": "Entrez un nom",
+        "address_last_name_too_long": "Le nom de famille est trop long (le maximum est de 255 caractères)",
+        "address_last_name_contains_emojis": "Le nom ne peut pas contenir d’emojis",
+        "address_last_name_contains_html_tags": "Le nom de famille ne peut pas contenir de balises HTML.",
         "address_address1_blank": "Entre une adresse",
+        "address_address1_too_long": "La première ligne d’adresse est trop longue (le maximum est de 255 caractères)",
+        "address_address1_contains_emojis": "Le champ d’adresse 1 ne peut pas contenir d’emojis",
+        "address_address1_contains_html_tags": "L'adresse1 ne peut pas contenir de balises HTML.",
         "address_address2_blank": "Entre dans un appartement, une suite, etc.",
+        "address_address2_too_long": "La deuxième ligne d’adresse est trop longue (le maximum est de 255 caractères)",
+        "address_address2_contains_emojis": "Le champ d’adresse 2 ne peut pas contenir d’emojis",
+        "address_address2_contains_html_tags": "L'adresse2 ne peut pas contenir de balises HTML.",
         "address_city_blank": "Saisis une ville",
+        "address_city_too_long": "Le nom de la ville est trop long (le maximum est de 255 caractères)",
+        "address_city_contains_emojis": "La ville ne peut pas contenir d’emojis",
+        "address_city_contains_html_tags": "La ville ne peut pas contenir de balises HTML.",
         "address_country_blank": "Sélectionner un pays\/une région",
         "address_country_not_supported": "Nous ne livrons pas actuellement à ce pays\/cette région. Saisis une nouvelle adresse d'expédition et réessaye.",
         "address_province_blank": "Sélectionne un État\/une province",
         "address_company_blank": "Entre un nom d'entreprise",
+        "address_company_too_long": "Le nom de l’entreprise est trop long (le maximum est de 255 caractères)",
+        "address_company_contains_emojis": "L’entreprise ne peut pas contenir d’emojis",
+        "address_company_contains_html_tags": "L'entreprise ne peut pas contenir de balises HTML.",
         "address_phone_blank": "Entre un numéro de téléphone valide",
+        "address_phone_contains_emojis": "Le numéro de téléphone ne peut pas contenir d’emojis",
         "address_zip_blank": "Entre un code postal",
         "address_zip_invalid_for_country": "Entre un code postal valide pour %{country}",
         "address_zip_invalid_for_country_and_province": "Entre un code postal valide pour %{province}, %{country}",
+        "address_zip_contains_emojis": "Le code postal ne peut pas contenir d’emojis",
         "credit_card_name_blank": "Entre ton nom tel qu'il est écrit sur ta carte",
         "credit_card_name_invalid": "Entre ton nom tel qu'il est écrit sur ta carte",
         "credit_card_number_invalid": "Entre un numéro de carte valide",
@@ -477,25 +521,17 @@
         "subscription_agreement_blank": "Pour poursuivre ton achat, accepte les conditions d'abonnement",
         "physical_gift_card_invalid_quantity": "Les rubriques de cartes-cadeaux physiques doivent avoir une quantité correspondant au nombre de codes de carte-cadeau.",
         "physical_gift_card_duplicate_code": "La rubrique de la carte-cadeau physique contient un code en double.",
-        "physical_gift_card_invalid_code": "Le code de la carte-cadeau physique n'est pas valide.",
-        "sms_marketing_phone_invalid": "Saisis un numéro de téléphone valide",
-        "address_first_name_too_long": "Le prénom est trop long (le maximum est de 255 caractères)",
-        "address_first_name_contains_html_tags": "Le prénom ne peut pas contenir de balises HTML.",
-        "address_last_name_too_long": "Le nom de famille est trop long (le maximum est de 255 caractères)",
-        "address_last_name_contains_html_tags": "Le nom de famille ne peut pas contenir de balises HTML.",
-        "address_address1_too_long": "La première ligne d’adresse est trop longue (le maximum est de 255 caractères)",
-        "address_address1_contains_html_tags": "L'adresse1 ne peut pas contenir de balises HTML.",
-        "address_address2_too_long": "La deuxième ligne d’adresse est trop longue (le maximum est de 255 caractères)",
-        "address_address2_contains_html_tags": "L'adresse2 ne peut pas contenir de balises HTML.",
-        "address_city_too_long": "Le nom de la ville est trop long (le maximum est de 255 caractères)",
-        "address_city_contains_html_tags": "La ville ne peut pas contenir de balises HTML.",
-        "address_company_too_long": "Le nom de l’entreprise est trop long (le maximum est de 255 caractères)",
-        "address_company_contains_html_tags": "L'entreprise ne peut pas contenir de balises HTML."
+        "physical_gift_card_invalid_code": "Le code de la carte-cadeau physique n'est pas valide."
       },
       "payment_errors": {
         "generic_error": "Un problème est survenu lors du traitement de ton paiement. Réessaye ou utilise un autre moyen de paiement.",
         "rejected_transaction": "Ton paiement a été refusé. Réessaye ou utilise un autre moyen de paiement.",
         "credit_card_processing": "Ton paiement ne peut pas être traité pour des raisons techniques. Réessaye dans quelques minutes ou utilise un autre moyen de paiement.",
+        "checkout_amount_changed": "Votre paiement n’a pas pu être traité, car le montant dû à la page de paiement a changé. Veuillez vérifier votre commande et réessayer.",
+        "deferred_payment_not_allowed": "Les paiements différés ne sont pas autorisés. Veuillez vérifier votre commande et réessayer.",
+        "deferred_payment_required": "Cette commande nécessite un paiement différé. Veuillez vérifier votre commande et réessayer.",
+        "deferred_amount_changed": "Votre paiement n’a pas pu être traité, car le montant du paiement différé a changé. Veuillez vérifier votre commande et réessayer.",
+        "deferred_date_changed": "Votre paiement n’a pas pu être traité, car la date du paiement différé a changé. Veuillez vérifier votre commande et réessayer.",
         "order_total_changed": "Le total de ta commande a changé. Actualise ton panier et réessaye.",
         "payment_processing": "Ton paiement ne peut pas être traité pour des raisons techniques. Réessaye ou utilise un autre moyen de paiement.",
         "payment_processing_no_retry": "Ton paiement ne peut pas être traité pour des raisons techniques. Essaie un autre moyen de paiement.",
@@ -612,6 +648,7 @@
         "tracking_number": "Numéro de suivi :",
         "company_tracking_number": "%{company} numéro de suivi :",
         "estimated_arrival": "Date de livraison estimée : ",
+        "estimated_delivery": "Date de livraison estimée ",
         "re-order": "Re-commander les mêmes articles",
         "confirmed": "Confirmé",
         "gift_card_confirmation_by_text": "Les cartes-cadeaux sont envoyées par SMS. Si vous n'avez pas reçu les tiennes, essaye de les envoyer de nouveau ou contacte-nous.",
@@ -737,9 +774,9 @@
         "delivery_information_label": "Informations sur la livraison :",
         "gift_card_sent_confirmation": "Cartes-cadeaux envoyées",
         "qr_code": {
+          "send_link_to_phone": "Ou envoie un lien à ton téléphone",
           "title": "Fais le suivi sur ton téléphone",
-          "subtitle": "Scanne le code avec l'appareil photo de ton téléphone pour faire le suivi avec Shop.",
-          "send_link_to_phone": "Ou envoie un lien à ton téléphone"
+          "subtitle": "Scanne le code avec l'appareil photo de ton téléphone pour faire le suivi avec Shop."
         },
         "shop_qr_with_sms_upsell": {
           "qr_code": {
@@ -749,7 +786,8 @@
           "sms": {
             "title": "Ou envoyez un lien à votre téléphone"
           }
-        }
+        },
+        "view_business_customer_account": "Voir le compte"
       },
       "review": {
         "title": "Avis",
@@ -772,21 +810,21 @@
       },
       "marketing": {
         "accept_marketing_checkbox_label": "Tenez-moi au courant de l'actualité et des offres",
-        "unsubscribe": {
-          "title": "Tu t'es désinscrit",
-          "description": "Tu ne recevras plus de rappels concernant ton panier de notre part."
-        },
+        "post_accept_marketing_checkbox_label": "Vous êtes abonné(e) pour recevoir les nouveautés et offres par e-mail",
+        "pending_accept_marketing_checkbox_label": "Consultez votre boîte mail pour confirmer votre abonnement aux nouveautés et offres",
         "accept_sms_checkbox_label": "Envoye-moi les nouvelles et les offres par SMS",
         "sms": {
           "disclaimer": {
             "privacy_policy": "Politique de confidentialité",
             "terms_of_service": "Conditions d'utilisation",
             "description_html": "En vous inscrivant aux envois par SMS, vous acceptez de recevoir des messages de marketing automatisés au numéro de téléphone fourni, notamment des rappels de panier. Le consentement n'est pas une condition d'achat. Répondez STOP pour vous désabonner. Répondez HELP pour obtenir de l'aide. La fréquence des messages varie. Des frais de messagerie et de données peuvent s'appliquer. Consultez notre %{privacy_policy_link} et nos %{terms_of_service_link}.",
-            "description_html_transactional": "Nous vous enverrons un reçu de commande et des mises à jour du statut de l'expédition par SMS. Répondez STOP pour vous désabonner. Répondez HELP pour obtenir de l'aide. La fréquence des messages varie. Des frais de messagerie et de données peuvent s'appliquer. Consultez notre Politique de confidentialité et nos Conditions de service."
+            "description_transactional_html": "Nous vous enverrons le reçu de la commande et des mises à jour régulières du statut de l'expédition par SMS. Répondez STOP pour vous désabonner. Répondez HELP pour obtenir de l'aide. La fréquence des messages varie. Des frais de messagerie et de données peuvent s'appliquer. Consultez notre %{privacy_policy_modal_link} et nos %{terms_of_service_modal_link}."
           }
         },
-        "post_accept_marketing_checkbox_label": "Vous êtes abonné(e) pour recevoir les nouveautés et offres par e-mail",
-        "pending_accept_marketing_checkbox_label": "Consultez votre boîte mail pour confirmer votre abonnement aux nouveautés et offres"
+        "unsubscribe": {
+          "title": "Tu t'es désinscrit",
+          "description": "Tu ne recevras plus de rappels concernant ton panier de notre part."
+        }
       },
       "shop_policies": {
         "refund_policy": "Politique de remboursement",
@@ -796,6 +834,10 @@
         "shipping_policy": "Politique d'expédition",
         "terms_of_sale": "Conditions générales de vente",
         "subscription_policy": "Politique d'abonnement"
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Conditions générales d’utilisation du Merchant of Record",
+        "privacy_policy": "Politique de confidentialité du Merchant of Record"
       },
       "remember_me": {
         "shopify_pay_label": "Shop Pay",
@@ -814,7 +856,10 @@
         "installments": {
           "paid_in_installments": "Payé en versements avec Shop Pay.",
           "view_schedule": "Afficher le programme"
-        }
+        },
+        "title_with_logo_html": "Se souvenir de moi avec %{shopify_pay}",
+        "label_address_payment_and_faster_checkouts": "Laisser Shop Pay remplir mon adresse et mes informations de paiement pour accélérer mes paiements.",
+        "label_faster_checkouts_and_thousand_shops": "Enregistrer mes informations avec Shop Pay pour accélérer mes paiements dans plus d'un million de boutiques."
       },
       "notifications": {
         "title": "Notifications"
@@ -1066,6 +1111,8 @@
         "product_sold_out": "Le produit « %{name} » n'est déjà plus en stock.",
         "variant_not_found": "Nous n'avons pas trouvé de variantes",
         "variant_requires_selling_plan": "La variante peut seulement être achetée avec un forfait de vente.",
+        "selling_plan_not_available_for_company_locations": "Seul l'achat ponctuel est disponible pour les commandes BtoB",
+        "digital_product_not_available_for_company_locations": "Il n'est pas possible d'ajouter cet article à une commande BtoB",
         "selling_plan_not_applicable": "Impossible d'appliquer le forfait de vente à la variante",
         "shipping_address_not_required": "Ce panier ne nécessite pas de livraison",
         "shipping_address_invalid": "Un problème est survenu lors du calcul de vos frais d’expédition. Continue à passer à la caisse pour choisir un tarif d’expédition avant de passer ta commande."
@@ -1119,6 +1166,35 @@
         }
       }
     },
+    "filters": {
+      "availability": {
+        "label": "Disponibilité",
+        "value": {
+          "in_stock": "En stock",
+          "out_of_stock": "En rupture de stock"
+        }
+      },
+      "vendor": {
+        "label": "Marque"
+      },
+      "price": {
+        "label": "Prix"
+      },
+      "product_type": {
+        "label": "Type de produit"
+      },
+      "boolean": {
+        "true_label": "Oui",
+        "false_label": "Non"
+      }
+    },
+    "search": {
+      "sorting": {
+        "relevance": "Pertinence",
+        "price_ascending": "Prix : faible à élevé",
+        "price_descending": "Prix : élevé à faible"
+      }
+    },
     "page_titles": {
       "blog_or_article_with_error": "Erreur – %{title}",
       "products": "Produits",
@@ -1164,68 +1240,12 @@
         "immediately": "Prête pour le ramassage maintenant",
         "next_day": "Prête pour le ramassage le jour suivant"
       }
-    },
-    "filters": {
-      "availability": {
-        "label": "Disponibilité",
-        "value": {
-          "in_stock": "En stock",
-          "out_of_stock": "En rupture de stock"
-        }
-      },
-      "vendor": {
-        "label": "Marque"
-      },
-      "price": {
-        "label": "Prix"
-      },
-      "product_type": {
-        "label": "Type de produit"
-      }
-    },
-    "search": {
-      "sorting": {
-        "relevance": "Pertinence",
-        "price_ascending": "Prix : faible à élevé",
-        "price_descending": "Prix : élevé à faible"
-      }
     }
   },
   "general": {
     "404": {
       "title": "Introuvable ",
       "subtext_html": "Oups, la page recherchée n'existe plus. "
-    },
-    "announcement-text": "<p><a href=\"\/collections\/granola\" title=\"Out of the box granola\">Notre granola out-of-the-box débarque. Profite de la livraison gratuite sur toutes les commandes dans le Benelux à partir de €35 !<\/a><\/p>",
-    "main-navigation-close": "fermer",
-    "main-navigation-cart": "panier",
-    "main-navigation-about": "à propos",
-    "main-navigation-where": "où acheter",
-    "main-navigation-faq": "FOIRE AUX QUESTIONS",
-    "main-navigation-team": "L’ÉQUIPE",
-    "main-navigation-privacy": "COOKIES ET POLITIQUE DE CONFIDENTIALITÉ",
-    "main-navigation-terms": "CONDITIONS GÉNÉRALES",
-    "cart-add": "ajouter au panier",
-    "cart-sold-out": "épuisé",
-    "cart-special-request": "Une demande particulière ?",
-    "cart-special-request-placeholder": "C'est parti !",
-    "cart-gift-wrap": "Emballer ma commande",
-    "cart-vat-invoice": "J'aimerais recevoir une facture TVA",
-    "cart-checkout": "Continuer au paiement",
-    "cart-empty": "Ton panier est vide",
-    "cart-remove": "enlever",
-    "footer-banner-text": "<p>                Livraison gratuite dans le Benelux à partir de €35. Paie avec Bancontact, Maestro, Paypal, Mastercard, Visa ou iDeal.                 Paie avec  Bancontact, Maestro, Paypal, Mastercard, Visa ou iDeal. <\/p>",
-    "footer-cta-text": "C'est quoi le programme ?",
-    "newsletter-title": "Tu veux sauver le monde ? Commence par t'abonner à notre newsletter et pour ta première commande on t'offre les frais de livraison.",
-    "newsletter-placeholder": "Email",
-    "newsletter-body": "<p>Pas de spam, juste du booon contenu. <\/p>",
-    "newsletter-privacy": "<p>En soumettant ce formulaire, tu acceptes notre  <a href=\"\/policies\/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\"><em>privacy policy<\/em><\/a>.<\/p>",
-    "cookies-title": "Notre site utilise des cookies !",
-    "cookies-body": "<p>Ces cookies sont nécessaires pour que le site web fonctionne correctement. En plus de ceux-ci, il existe des cookies supplémentaires qui collectent des informations sur tes intérêts et tes préférences.<\/p>",
-    "cookies-list-functionality": "<p><strong>Les cookies de fonctionnalité sont utilisés pour mémoriser les informations des visiteurs sur le site web, par exemple la langue, le fuseau horaire, le contenu amélioré. <\/p>",
-    "cookies-list-targetting": "<p><strong>Les cookies de ciblage sont utilisés pour identifier les visiteurs entre différents sites web, par exemple les partenaires de contenu, les réseaux de bannières. Ces cookies peuvent être utilisés par des entreprises pour établir un profil des intérêts des visiteurs ou montrer des publicités pertinentes sur d'autres sites web.\n.<\/p>",
-    "cookies-list-social": "<p><strong>Social Media Connections assure une interaction correcte avec les différents médias sociaux afin que tu puisses, par exemple, partager des articles.<\/p>",
-    "cookies-accept-all": "Accepter tous les cookies.",
-    "cookies-accept-minimal": "Utiliser les cookies essentiels. "
+    }
   }
 }
