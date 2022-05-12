@@ -85,6 +85,11 @@
   
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script>
+    $('.quick-addToCart').hover(function() {
+      var variantPrice = $(this).data('price');
+      $(this).text(variantPrice);
+    });
+    
     $('.quick-addToCart').click(function() {
       if($(this).data('variant') != "") {
         window.sidecart.add($(this).data('variant'));
