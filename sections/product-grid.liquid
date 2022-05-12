@@ -3,7 +3,7 @@
   <div class="product-grid__tiles">
     {%- assign tileClass = 'tile__product' -%}
     {% for block in section.blocks %}
-      {% include 'tile', block.settings.tile_product, add_to_cart, find_out_more, tileClass %}
+      {% include 'tile', tileClass %}
     {% endfor %}
   </div>
 </section>
@@ -37,18 +37,6 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
-        },
-		{
-          "id": "add_to_cart",
-          "type": "text",
-          "label": "Add to Cart text",
-		  "default": "add to cart"
-        },
-		{
-          "id": "find_out_more",
-          "type": "text",
-          "label": "Find out more text",
-		  "default": "Find out more"
         },
         {
           "type": "url",
@@ -85,6 +73,24 @@
         }
       ],
       "default": "3"
+    },
+	{
+      "id": "add_to_cart",
+      "type": "text",
+      "label": "Add to Cart text",
+      "default": "add to cart"
+    },
+    {
+      "id": "sold_out",
+      "type": "text",
+      "label": "Sold out text",
+      "default": "sold out"
+    },
+    {
+      "id": "find_out_more",
+      "type": "text",
+      "label": "Find out more text",
+      "default": "Find out more"
     }
   ],
   "presets": [
