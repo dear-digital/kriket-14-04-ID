@@ -2242,6 +2242,7 @@ body.template--index:not(.scrolled) .nav__center svg path:nth-child(22), body.na
 
 .overlay__content__checkout {
   padding-top: 20px;
+  border-top: 2px solid #fff;
 }
 
 .tile {
