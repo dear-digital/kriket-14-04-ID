@@ -81,7 +81,7 @@
           <span class="subtotal-text">Free Shipping</span>
           <span class="subtotal-text">€0,00</span>
         </div>
-        <a class="arrow-link" href="{{ routes.cart_url }}">{% include 'arrow.svg' %} {{ settings.cart-checkout }}</a>
+        <a href="{{ routes.cart_url }}" class="checkout-btn">{% include "icon-lock" %} {{ settings.cart-checkout }}</a>
       </div>
     </div>
   </div>
