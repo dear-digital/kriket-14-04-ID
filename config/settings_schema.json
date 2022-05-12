@@ -162,6 +162,24 @@
         "type": "product",
         "id": "upsell_product",
         "label": "Upsell Product"
+      },
+      {
+        "type": "text",
+        "id": "subtotal_text",
+        "label": "Subtotal text",
+        "default": "Subtotal"
+      },
+      {
+        "type": "text",
+        "id": "shipping_text",
+        "label": "Shipping text",
+        "default": "Shipping Price"
+      },
+      {
+        "type": "text",
+        "id": "shipping_price_text",
+        "label": "Shipping Price text",
+        "default": "Calc. at next step"
       }
     ]
   },
