@@ -27,9 +27,6 @@
   border-radius: 16px;
   margin: 0 auto;
 }
-.tile__content {
-  height: 132px;
-}
 
 @media (min-width: 1078px) and (max-width: 1140px) {
   .quick-addToCart {
