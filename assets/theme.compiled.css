@@ -1716,6 +1716,12 @@ body.template--index:not(.scrolled) .nav__center svg path:nth-child(22), body.na
 .nav__right a {
   display: inline-block;
   margin-left: 30px;
+  position: relative;
+}
+.nav__right a .nav__cart-counter {
+  position: absolute;
+  left: auto;
+  right: -12px;
 }
 @media (max-width: 1023px) {
   .nav__right a:first-child {
