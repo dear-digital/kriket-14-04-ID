@@ -2279,8 +2279,10 @@ body.template--index:not(.scrolled) .nav__center svg path:nth-child(22), body.na
 .tile__title {
   font-family: "Agrandir", sans-serif;
   font-weight: 800;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 21px;
+  line-height: 28px;
+  height: 56px;
+  overflow: hidden;
 }
 @media (max-width: 1023px) {
   .tile__title {
