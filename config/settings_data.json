@@ -32,7 +32,7 @@
             "type": "block",
             "settings": {
               "title": "Discovery box Granola",
-              "content": "<p>Out of the box granola with high quality ingredients, nourishing and yummy. Turn your breakfast into a party. <em>Starting from €5,69<\/em><\/p>",
+              "content": "<p>Out of the box granola with high quality ingredients, nourishing and yummy. Turn your breakfast into a party.<\/p>",
               "tile_product": "discovery-box",
               "image": "shopify:\/\/shop_images\/KRIKET_Granola_Website_DB.png",
               "link": "shopify:\/\/products\/discovery-box",
@@ -43,7 +43,7 @@
             "type": "block",
             "settings": {
               "title": "Discovery box                    Bars",
-              "content": "<p>Our bars are the all-round healthy treat, just perfect for whenever you need that extra boost. Indulge!  <em>Starting from €1,85<\/em><\/p>",
+              "content": "<p>Our bars are the all-round healthy treat, just perfect for whenever you need that extra boost. Indulge!<\/p>",
               "tile_product": "discovery-box-1",
               "image": "shopify:\/\/shop_images\/KRIKET_Bars_Website_DB_8018c811-0881-4000-9853-7cdf682b690a.png",
               "link": "shopify:\/\/products\/discovery-box-1",
@@ -54,7 +54,7 @@
             "type": "block",
             "settings": {
               "title": "Discovery box Crunchy Crickets",
-              "content": "<p>Discover the real deal: tiny little critters in all their glory covered with a finger-licking mix of spices. <em>Starting from €2,79<\/em><\/p>",
+              "content": "<p>Discover the real deal: tiny little critters in all their glory covered with a finger-licking mix of spices.<\/p>",
               "tile_product": "discovery-box-2",
               "image": "shopify:\/\/shop_images\/KRIKET_CrunchyCrickets_Website_DB.png",
               "link": "shopify:\/\/collections\/crunchy-crickets",
@@ -222,6 +222,7 @@
             "settings": {
               "title": "Granola",
               "content": "<p>Out of the box granola with high quality ingredients only, nourishing and yummy. Turn your breakfast into a party. <em>Starting from €5,69<\/em><\/p>",
+              "tile_product": "",
               "image": "shopify:\/\/shop_images\/KRIKET_Granola_Website_DB.png",
               "link": "shopify:\/\/collections\/granola",
               "sticker": "sticker-new-db"
@@ -232,6 +233,7 @@
             "settings": {
               "title": "Bars",
               "content": "<p>Our bars are the all-round healthy treat, just perfect for whenever you need that extra boost. Indulge! <em>Starting from €1,85<\/em><\/p>",
+              "tile_product": "",
               "image": "shopify:\/\/shop_images\/KRIKET_Bars_Website_DB_8018c811-0881-4000-9853-7cdf682b690a.png",
               "link": "shopify:\/\/collections\/bars",
               "sticker": "sticker-improved-db"
@@ -242,6 +244,7 @@
             "settings": {
               "title": "Crunchy Crickets",
               "content": "<p>Discover the real deal: tiny little critters in all their glory covered with a finger-licking mix of spices. <em>Starting from €2,79<\/em><\/p>",
+              "tile_product": "",
               "image": "shopify:\/\/shop_images\/KRIKET_CrunchyCrickets_Website_DB.png",
               "link": "shopify:\/\/collections\/crunchy-crickets",
               "sticker": "sticker-can-you-handle-db"
@@ -252,6 +255,7 @@
             "settings": {
               "title": "Starter Box",
               "content": "<p>Your AHA moment when you’re just so curious you can’t choose. Well, you don’t have to! <\/p>",
+              "tile_product": "",
               "image": "shopify:\/\/shop_images\/KRIKET_StarterBox_Website.png",
               "link": "shopify:\/\/products\/starter-box",
               "sticker": ""
@@ -262,6 +266,7 @@
             "settings": {
               "title": "Cricket Powder",
               "content": "<p>Looking to add a little hop into your daily meals? This will do exactly that.<\/p>",
+              "tile_product": "",
               "image": "shopify:\/\/shop_images\/KRIKET_CricketPowder_Website_93d6e988-a27b-488c-978a-2bec0ab9885c.png",
               "link": "shopify:\/\/products\/cricket-powder",
               "sticker": ""
@@ -272,6 +277,7 @@
             "settings": {
               "title": "Merch + gifts",
               "content": "<p>We're serving you delicious merch and gifts. Sustainable yet fashionable, you'll be ready to spread the KRIKET vibe in style.<\/p>",
+              "tile_product": "",
               "image": "shopify:\/\/shop_images\/KRIKET_Hoodie_Website.png",
               "link": "shopify:\/\/collections\/merch",
               "sticker": ""
@@ -288,7 +294,8 @@
         ],
         "settings": {
           "title": "Categories, we’ve got them",
-          "items-per-row": "3"
+          "items-per-row": "3",
+          "find_out_more": "Find out more"
         }
       },
       "content-feature": {
