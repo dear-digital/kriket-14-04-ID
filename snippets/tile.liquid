@@ -24,7 +24,7 @@
         {% assign tile_product_price = tileProduct.variants[1].price | money %}
     {% endif %}
   
-  	<span class="tile__title marg-top-xs">{{ tile_variant_name }}</span>
+  	<span class="tile__variant_title marg-top-xs">{{ tile_variant_name }}</span>
     <button class="quick-addToCart" data-variant="{{ tile_product_id.id }}" data-price="{{ tile_product_price }}" data-available="{{ tile_product_id.available }}">
       {% if tile_product_id.available %}
       	{{ settings.cart-add }}
