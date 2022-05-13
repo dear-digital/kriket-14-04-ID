@@ -9,7 +9,7 @@
   {% endunless %}
 
   <a href="{{block.settings.link}}"><span class="tile__title">{{ block.settings.title | truncatewords: 3 }}</span></a>
-  <span class="tile__content">{{ block.settings.content }}</span>
+  <span class="tile__content">{{ block.settings.content | truncatewords: 20 }}</span>
   
   {% assign tileProduct = block.settings.tile_product %}
   
