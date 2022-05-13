@@ -7,6 +7,12 @@
 .marg-bottom-xs {
   margin-bottom: 8px;
 }
+.tile__variant_title {
+  font-family: "Agrandir", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+}
 .quick-addToCart {
   width: 100%;
   max-width: 250px;
