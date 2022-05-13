@@ -9,7 +9,7 @@
   {% endunless %}
 
   <a href="{{block.settings.link}}"><span class="tile__title">{{ block.settings.title | truncatewords: 3 }}</span></a>
-  <span class="tile__content">{{ block.settings.content | truncate: 90 }}</span>
+  <span class="tile__content">{{ block.settings.content | strip_html | truncate: 90 }}</span>
   
   {% assign tileProduct = block.settings.tile_product %}
   
@@ -24,6 +24,7 @@
         {% assign tile_product_price = tileProduct.variants[1].price | money %}
     {% endif %}
   
+  <div class="product_add_details">
   	<span class="tile__variant_title marg-top-xs">{{ tile_variant_name }}</span>
     <button class="quick-addToCart" data-variant="{{ tile_product_id.id }}" data-price="{{ tile_product_price }}" data-available="{{ tile_product_id.available }}">
       {% if tile_product_id.available %}
@@ -33,6 +34,7 @@
       {% endif %}
     </button>
   	<a href="{{block.settings.link}}" class="tile-product-link">{{ section.settings.find_out_more }}</a>
+  </div>
   {% endif %}
   
 </div>
