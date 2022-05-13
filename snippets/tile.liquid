@@ -25,7 +25,7 @@
     {% endif %}
   
   <div class="product_add_details">
-  	<span class="tile__variant_title marg-top-xs">{{ tile_variant_name }}</span>
+  	<p class="tile__variant_title marg-top-xs">{{ tile_variant_name }}</p>
     <button class="quick-addToCart" data-variant="{{ tile_product_id.id }}" data-price="{{ tile_product_price }}" data-available="{{ tile_product_id.available }}">
       {% if tile_product_id.available %}
       	{{ settings.cart-add }}
