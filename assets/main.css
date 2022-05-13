@@ -14,6 +14,7 @@
   line-height: 24px;
 }
 .quick-addToCart {
+  display: block;
   width: 100%;
   max-width: 250px;
   background-color: #de9aa0;
@@ -28,6 +29,7 @@
   cursor: pointer;
 }
 .tile-product-link {
+  display: block;
   width: fit-content;
   width: -moz-fit-content;
   padding: 12px;
