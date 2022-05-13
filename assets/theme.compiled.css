@@ -2293,11 +2293,10 @@ body.template--index:not(.scrolled) .nav__center svg path:nth-child(22), body.na
 
 .tile__content {
   display: block;
-/*   height: 88px;
-  overflow: hidden; */
   font-size: 16px;
   margin: 16px auto 0;
   max-width: 100%;
+  min-height: 66px;
   box-sizing: border-box;
 }
 .tile__content p {
