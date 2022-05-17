@@ -764,7 +764,7 @@
         "order_updates_subscribe_to_email_notifications": "Recevoir des mises à jour sur le statut de l’expédition par e-mail",
         "order_updates_subscribe_to_email_or_phone_notifications": "Reçois les mises à jour sur l'expédition par e-mail ou message.",
         "order_updates_subscribe_to_phone_notifications": "Reçois les mises à jour sur l'expédition par message.",
-        "order_updates_submit_subscription": "Envoyer",
+        "order_updates_submit_subscription": "Soumettre",
         "track_shipment": "Suivre l'envoi",
         "shopify_pay": {
           "order_completed_html": "Commande complétée avec %{shopify_pay}",
@@ -784,14 +784,14 @@
             "description": "Shop vous enverra des informations sur la livraison en temps réel dès que votre commande sera expédiée."
           },
           "sms": {
-            "title": "Ou envoyez un lien à votre téléphone"
+            "title": "Ou envoie un lien à ton téléphone"
           }
         },
         "view_business_customer_account": "Voir le compte"
       },
       "review": {
         "title": "Avis",
-        "review_title": "Réviser la commande",
+        "review_title": "Vérifier la commande",
         "checkout_as_guest": "Passer à la caisse en tant qu’invité",
         "blocks": {
           "contact_method_title": "Contact",
