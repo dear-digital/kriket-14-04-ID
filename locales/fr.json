@@ -1065,7 +1065,7 @@
         "financial_status": {
           "authorized": "Autorisée",
           "pending": "En cours",
-          "paid": "Payée",
+          "paid": "Payé",
           "unpaid": "Impayée",
           "voided": "Annulée",
           "partially_paid": "Partiellement payée",
@@ -1111,8 +1111,8 @@
         "product_sold_out": "Le produit « %{name} » n'est déjà plus en stock.",
         "variant_not_found": "Nous n'avons pas trouvé de variantes",
         "variant_requires_selling_plan": "La variante peut seulement être achetée avec un forfait de vente.",
-        "selling_plan_not_available_for_company_locations": "Seul l'achat ponctuel est disponible pour les commandes BtoB",
-        "digital_product_not_available_for_company_locations": "Il n'est pas possible d'ajouter cet article à une commande BtoB",
+        "selling_plan_not_available_for_company_locations": "Seul l'achat ponctuel est disponible pour les commandes B2B",
+        "digital_product_not_available_for_company_locations": "Il n'est pas possible d'ajouter cet article à une commande B2B",
         "selling_plan_not_applicable": "Impossible d'appliquer le forfait de vente à la variante",
         "shipping_address_not_required": "Ce panier ne nécessite pas de livraison",
         "shipping_address_invalid": "Un problème est survenu lors du calcul de vos frais d’expédition. Continue à passer à la caisse pour choisir un tarif d’expédition avant de passer ta commande."
@@ -1237,8 +1237,8 @@
         "five_or_more_days": "Habituellement prête en 5 jours ou plus",
         "zero_to_two_hours": "Habituellement prête en 2 heures",
         "two_to_four_hours": "Habituellement prête en 4 heures",
-        "immediately": "Prête pour le ramassage maintenant",
-        "next_day": "Prête pour le ramassage le jour suivant"
+        "immediately": "Prêt pour l'enlèvement maintenant",
+        "next_day": "Prêt pour l'enlèvement le jour suivant"
       }
     }
   },
