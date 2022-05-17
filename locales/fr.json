@@ -741,7 +741,7 @@
         "order_number_label": "Numéro de commande",
         "customer_validation_error": "Saisis un e-mail ou un numéro de commande valide.",
         "customer_validation_error_phone": "Saisis un numéro de téléphone ou un numéro de commande valide.",
-        "login": "Connexion",
+        "login": "Ouvrir une session",
         "unfulfilled_items_title": "Envoi en cours de préparation",
         "unfulfilled_items_description": "Nous préparons en ce moment même ces articles pour envoi.",
         "marker": {
