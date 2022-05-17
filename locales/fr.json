@@ -108,7 +108,7 @@
       "delivery_options": {
         "free_total_label": "Gratuit",
         "ship": "Expédier",
-        "shipping_address": "Adresse d'expédition",
+        "shipping_address": "Adresse de livraison",
         "pick_up": "Récupérer",
         "pick_up_locations": "Centres de retrait",
         "pick_up_in_one_hour": "Habituellement prête en 1 heure",
