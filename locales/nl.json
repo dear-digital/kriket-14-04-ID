@@ -142,7 +142,7 @@
         "reduced_label": "Verminderd",
         "reduced_with_quantity_label": "Slechts %{quantity_available} op voorraad",
         "remove_from_cart_button_label": "Verwijder uit winkelwagen",
-        "continue_shopping_button_label": "Verdergaan",
+        "continue_shopping_button_label": "Verder",
         "go_back_to_cart_button_label": "Terug naar mijn winkelwagen"
       },
       "order_summary": {
