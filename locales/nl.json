@@ -948,7 +948,7 @@
       "customer_payment_methods": {
         "page_title": "Betaalmethoden",
         "title": "Betaalmethoden",
-        "update_card_button_label": "Update kaart",
+        "update_card_button_label": "Kaart updaten",
         "delete_customer_mandate": {
           "generic_error": "Er is een probleem opgetreden met het verwerken van je aanvraag.",
           "success_message": "Je betaalmethode is verwijderd"
