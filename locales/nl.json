@@ -1203,7 +1203,7 @@
       "create_account": "Account aanmaken",
       "reset_account": "Account resetten",
       "addresses": "Adressen",
-      "order": "Bestel %{name}",
+      "order": "Bestelling %{name}",
       "search": "Zoeken",
       "search_results": {
         "one": "Zoeken: %{count} resultaat gevonden voor '%{terms}'",
@@ -1220,12 +1220,12 @@
     "challenge": {
       "message": "Laat ons weten dat je geen robot bent om verder te gaan.",
       "error": "Je antwoord was niet goed, probeer het nogmaals.",
-      "submit_button_text": "Verzenden"
+      "submit_button_text": "Indienen"
     },
     "checkpoint": {
       "message": "Los captcha op om door te gaan",
       "error": "captcha-verificatie mislukt",
-      "submit_button_text": "Verzenden"
+      "submit_button_text": "Indienen"
     },
     "store_availability": {
       "pick_up_time": {
