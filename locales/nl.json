@@ -644,7 +644,7 @@
         "shipping_address_title": "Bezorgadres",
         "shipping_address_map_title": "Google-kaart met pinpoint van het bezorgadres: %{address}",
         "payment_method_title": "Betaalmethode",
-        "shipping_method_title": "Verzendmethode",
+        "shipping_method_title": "Verzendwijze",
         "tracking_number": "Traceringsnummer:",
         "company_tracking_number": "%{company} trackingnummer:",
         "estimated_arrival": "Geschatte afleverdatum: ",
