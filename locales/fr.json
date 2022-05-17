@@ -584,7 +584,7 @@
         "escape_action": "Afficher la confirmation de commande ›",
         "components": {
           "close": "Fermer",
-          "expand": "Afficher plus",
+          "expand": "Voir plus",
           "processing": "En cours de traitement...",
           "submit": "Soumettre"
         }
@@ -674,7 +674,7 @@
         "order_status_confirmed_order_with_phone_payment": "Tu as effectué un paiement sur ta commande le %{date}.",
         "order_status_confirmed_order_with_email_and_phone_payment": "Tu as effectué un paiement sur ta commande le %{date}.",
         "order_status_confirmed_order_with_email_pick_up": "Tu recevras un e-mail lorsque ta commande sera prête pour l'enlèvement.",
-        "order_status_confirmed_order_with_phone_pick_up": "Tu recevras un SMS lorsque ta commande sera prête pour l'enlèvement.",
+        "order_status_confirmed_order_with_phone_pick_up": "Tu recevras un SMS lorsque ta commande sera prête à être retirée.",
         "order_status_confirmed_order_with_email_and_phone_pick_up": "Tu recevras un e-mail et un SMS lorsque ta commande sera prête pour l'enlèvement.",
         "order_status_confirmed_order_local": "Nous préparons actuellement la livraison de ta commande.",
         "order_status_updates_with_email": "Vous recevrez les mises à jour sur l'expédition et la livraison par e-mail.",
