@@ -1276,6 +1276,9 @@
     "cookies-list-social": "<p><strong>Social Media Connections<\/strong> Sociale-media-koppelingen zorgen voor de juiste interactie met de verschillende sociale media, zodat je bijvoorbeeld artikelen kunt delen.<\/p>",
     "cookies-accept-all": "Alle cookies aanvaarden",
     "cookies-accept-minimal": "Noodzakelijke cookies aanvaarden",
-    "subtotal_text": "Subtotaal"
+    "subtotal_text": "Subtotaal",
+    "shipping_text": "Verzendkost",
+    "shipping_price_text": "Berekend bij de volgende stap",
+    "upsell_heading": "Wat denk je van dit extraatje? "
   }
 }
