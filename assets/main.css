@@ -98,6 +98,60 @@
   cursor: pointer;
 }
 
+/* Product Page CSS */
+.variant-options {
+  text-align: center;
+}
+.variant-box-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 0 24px;
+}
+.variant-box {
+  display: block;
+  width: fit-content;
+  width: -moz-fit-content;
+  background-color: #fff;
+  padding: 12px 30px 10px;
+  border: none;
+  border-radius: 30px;
+  color: #000;
+  font-family: Agrandir,sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0 16px 16px 0;
+  cursor: pointer;
+}
+.variant-box.selected {
+  background-color: #e5aa92;
+  color: #fff;
+}
+#AddToCart {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  background-color: #d26d4b;
+  padding: 12px 30px 10px;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-family: Agrandir,sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 28px;
+  cursor: pointer;
+}
+#AddToCart:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
 @media (min-width: 993px) and (max-width: 1140px) {
   .tile__variant_title {
   	font-size: 16px;
