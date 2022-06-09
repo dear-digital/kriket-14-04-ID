@@ -31,6 +31,19 @@
       <h1 class="page-header__title">{{ product.title }}</h1>
       <div class="page-header__intro">{{ product.description }}</div>
     </div>
+    <div class="variant-options">
+      <div class="variant-box-wrapper">
+        {% for variant in product.variants %}
+        <div class="variant-box {% if forloop.first %}selected{% endif %}" data-available="{{ variant.available }}" data-variant="{{ variant.id }}">
+          <input type="hidden" name="id" value="{{ variant.id }}">
+          <input type="hidden" name="quantity" value="1">
+          <span>{{ variant.title }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      <button id="AddToCart" {% if product.first_available_variant.available %}{% else %}disabled{% endif %}>{% if product.first_available_variant.available %}{{ settings.cart-add }}{% else %}{{ settings.cart-sold-out }}{% endif %}</button>
+    </div>
+    {% comment %}
     <div class="purchase-buttons">
       {% for variant in product.variants %}
         <form action="/cart/add" method="post" enctype="multipart/form-data">
@@ -40,6 +53,7 @@
         </form>
       {% endfor %}
     </div>
+    {% endcomment %}
   </div>
 
 </section>
@@ -57,3 +71,29 @@
 {% section 'product-grid' %}
 {% section 'side-by-side' %}
 {% section 'content-grid' %}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+  $(".variant-box").click(function() {
+  	$(".variant-box").removeClass("selected");
+    $(this).addClass("selected");
+    if($(this).data("available")) {
+      $("#AddToCart").attr("disabled",false);
+      $("#AddToCart").text("{{ settings.cart-add }}");
+    }
+    else {
+	  $("#AddToCart").attr("disabled","disabled");
+      $("#AddToCart").text("{{ settings.cart-sold-out }}");
+    }
+  });
+      
+  $("#AddToCart").click(function() {
+    window.sidecart.add($(".variant-box.selected").data("variant"));
+    window.overlays['overlay-cart'].open();
+    window.updateSubtotalPrice();
+    window.updateShippingPrice();
+    window.hideShowUpsell();
+    window.hideShowCheckout();
+  });
+</script>
