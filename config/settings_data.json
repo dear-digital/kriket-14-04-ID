@@ -4750,7 +4750,7 @@
             "type": "block",
             "settings": {
               "title": "Play & Eat family box",
-              "content": "<p>The perfect family game this summer. Saving the planet was never that much fun! <\/p>",
+              "content": "<p>The perfect family game this summer. Complete the missions and crack the code!  <\/p>",
               "tile_product": "play-eat-box",
               "image": "shopify:\/\/shop_images\/MicrosoftTeams-image_3_-_cut_08417e10-3710-47b0-8fea-ae585adcc741.png",
               "link": "shopify:\/\/products\/play-eat-box",
@@ -4775,7 +4775,7 @@
           "3a858616-00bd-41e1-ba05-b3db5f4cf93c"
         ],
         "settings": {
-          "title": "Discover everything yummy from the KRIKET universe.",
+          "title": "Saving the planet was never that much fun!",
           "items-per-row": "2",
           "find_out_more": "Find out more"
         }
