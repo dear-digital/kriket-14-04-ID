@@ -4749,11 +4749,11 @@
           "4f8df74d-3e2c-4185-a557-f1b32f0fc7f9": {
             "type": "block",
             "settings": {
-              "title": "Starter Box",
-              "content": "<p>Your AHA moment when you're just so curious you can't choose.<\/p>",
-              "tile_product": "starter-box",
-              "image": "shopify:\/\/shop_images\/Starter_box_smaller_vAudrey.png",
-              "link": "shopify:\/\/products\/starter-box",
+              "title": "Play & Eat family box",
+              "content": "<p>The perfect family game this summer. Saving the planet was never that much fun! <\/p>",
+              "tile_product": "play-eat-box",
+              "image": "shopify:\/\/shop_images\/MicrosoftTeams-image_3_-_cut_08417e10-3710-47b0-8fea-ae585adcc741.png",
+              "link": "shopify:\/\/products\/play-eat-box",
               "sticker": ""
             }
           },
