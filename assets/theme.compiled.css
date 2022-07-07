@@ -2279,21 +2279,24 @@ body.template--index:not(.scrolled) .nav__center svg path:nth-child(22), body.na
 }
 
 .tile__image {
-  width: 100%;
+    width: 100%;
+    height: 20vw;
+    object-fit: contain;
 }
 
 .tile__title {
   display: block;
-  font-family: "Agrandir", sans-serif;
+  font-family: Agrandir,sans-serif;
   font-weight: 800;
   font-size: 20px;
   line-height: 28px;
-  height: 56px;
+  min-height: 85px;
 }
 @media (max-width: 1023px) {
   .tile__title {
     font-size: 16px;
     line-height: 21px;
+    min-height: 56px;
   }
 }
 
