@@ -34,11 +34,22 @@
     <div class="variant-options">
       <div class="variant-box-wrapper">
         {% for variant in product.variants %}
+        {%- if variant.compare_at_price != blank -%}
         <div class="variant-box {% if forloop.first %}selected{% endif %}" data-available="{{ variant.available }}" data-variant="{{ variant.id }}">
           <input type="hidden" name="id" value="{{ variant.id }}">
           <input type="hidden" name="quantity" value="1">
-          <span>{{ variant.title }}</span>
+          <span>
+            <span class="stike-through">{{variant.compare_at_price | money_without_trailing_zeros }}</span>
+            - Now {{variant.price | money_without_trailing_zeros }}. Save {{variant.compare_at_price | minus : variant.price | money_without_trailing_zeros}}!
+          </span>
         </div>
+        {% else %}
+        <div class="variant-box {% if forloop.first %}selected{% endif %}" data-available="{{ variant.available }}" data-variant="{{ variant.id }}">
+          <input type="hidden" name="id" value="{{ variant.id }}">
+          <input type="hidden" name="quantity" value="1">
+          <span>{{variant.title}}</span>
+        </div>
+         {%- endif -%}
         {% endfor %}
       </div>
       <button id="AddToCart" {% if product.first_available_variant.available %}{% else %}disabled{% endif %}>{% if product.first_available_variant.available %}{{ settings.cart-add }}{% else %}{{ settings.cart-sold-out }}{% endif %}</button>
