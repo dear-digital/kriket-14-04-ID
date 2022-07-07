@@ -25,7 +25,11 @@
     {% endif %}
   
   <div class="product_add_details">
-  	<p class="tile__variant_title marg-top-xs">{{ tile_variant_name }}</p>
+    {%- if tileProduct.compare_at_price != blank -%}
+    <p class="tile__variant_title marg-top-xs"><span class="stike-through">{{tileProduct.compare_at_price | money_without_trailing_zeros }}</span> - Now {{tileProduct.price | money_without_trailing_zeros }}. Save {{tileProduct.compare_at_price | minus : tileProduct.price | money_without_trailing_zeros}}!</p>
+	{% else %}
+	<p class="tile__variant_title marg-top-xs">{{ tile_variant_name }}</p>
+    {%- endif -%}
     <button class="quick-addToCart" data-variant="{{ tile_product_id.id }}" data-price="{{ tile_product_price }}" data-available="{{ tile_product_id.available }}">
       {% if tile_product_id.available %}
       	{{ settings.cart-add }}
