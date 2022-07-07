@@ -1,11 +1,52 @@
 .no-disp {
   display: none !important;
 }
+.rel {
+  position: relative !important;
+}
+.no-scroll {
+    overflow: hidden !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.justify-center {
+  justify-content: center !important;
+}
+.justify-around {
+  justify-content: space-around !important;
+}
+.justify-between {
+  justify-content: space-between !important;
+}
+.align-center{
+	align-items: center;
+}
+.center-it {
+  display: block !important;
+  margin: 0 auto !important;
+}
+.flex-box{
+	display: flex;
+}
+.row-rev{
+	flex-direction: row-reverse;
+}
+.flex-wrap{
+	flex-wrap : wrap;
+}
 .marg-top-xs {
   margin-top: 8px;
 }
 .marg-bottom-xs {
   margin-bottom: 8px;
+}
+.stike-through {
+  text-decoration: line-through;
+  color: #30312f;
 }
 .tile__variant_title {
   font-family: "Agrandir", sans-serif;
@@ -169,4 +210,152 @@
   .checkout-btn {
     font-size: 16px;
   }
+  .style_scrollbar::-webkit-scrollbar {
+    display:none;
+  } 
+}
+
+/* .style_scrollbar::-webkit-scrollbar {
+ display:none;
+} */
+/* width */
+.style_scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.style_scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.style_scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+.style_scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* VAT css */
+
+.checkVAT {
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 8px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.overlay__content {
+    position: relative;
+}
+.check-VAT-block {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    max-width: 491px;
+    height: 40vh;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #fff;
+    transition: all .4s ease;
+    font-family: Agrandir,sans-serif;
+    margin: 0 auto;
+    justify-content: center;
+    box-shadow: -20px 0 15px #3c3c3b1a;
+    transform: translateX(-45%);
+    left: 50%;
+}
+.check-VAT-block.drawn {
+    bottom: 0;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%);
+}
+.VAT-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 16px;
+  max-width: 396px;
+/*   margin: 0 auto; */
+}
+.close-VAT {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.close-VAT svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.vat-field, .email-field, #vat_reg_no_acc {
+  text-align: left;
+/*   padding: 1.5rem; */
+  border: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #de9aa0;
+  color: #de9aa0;
+  font-size: 15px;
+  width: 100%;
+  height: 1rem;
+  margin-bottom: 16px;
+  transition: all var(--duration-short) ease;
+  outline : none;
+}
+#validateVAT-btn, .saveVAT-btn {
+  display: table;
+  width: fit-content;
+  width: -moz-fit-content;
+  padding: 14px 44px;
+  font-family: var(--font-body-family);
+  font-weight: 400;
+  border: 0;
+  letter-spacing: .8px;
+/*   font-size: 16px;
+  line-height: 22px; */
+  background-color: #de9aa0;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 16px auto;
+  cursor: pointer;
+  transition: all var(--duration-short) ease;
+}
+.vat_info {
+  margin: 0;
+  text-align: center;
+  color:#de9aa0;
+}
+.vat_response {
+  font-size: 14px;
+  line-height: 22px;
+  margin: 12px 0 0;
+  text-align: center;
+  color:#de9aa0;
+}
+.update-cart-note {
+  display: table !important;
+  max-width: 364px;
+  width: 100% !important;
+  margin: 14px auto 0 !important;
+  background-color: #342d25 !important;
+  color: #f4ede2 !important;
 }
